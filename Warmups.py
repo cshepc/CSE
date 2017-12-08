@@ -35,9 +35,30 @@ and prints put name.py
 
 # 12.6.17
 
+#
+# def add(num1, num2, num3):
+#     print(num1+ num2 + num3)
+#
+#
+# add(70, 4, 19)
 
-def add(num1, num2, num3):
-    print(num1+ num2 + num3)
+
+# 12.7.17
+
+#
+# def repeat(string):
+#     print(string)
+#     print(string)
+#     print(string)
+#
+#
+# repeat("Jello")
 
 
-add(70, 4, 19)
+# 12.8.17
+
+def date(month, day, year):
+    print("%s/%s/%s" % (month, day, year))
+
+
+date(12, 8, 17)
