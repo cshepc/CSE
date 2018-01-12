@@ -18,4 +18,4 @@ while balance > 0:
 
 
 print('You started with 15 dollars. It took %s turns for you to run out of money' % number_of_turns)
-print('Your top balance was ' + str(top_balance) + ' dollars in round number ' +  str(top_turn))
+print('Your top balance was ' + str(top_balance) + ' dollars in round number ' + str(top_turn))

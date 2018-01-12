@@ -1,12 +1,11 @@
 import random
 
-hearts = random.randint(1, 13)
-spades = random.randint(1, 13)
-diamonds = random.randint(1, 13)
-clubs = random.randint(1, 13)
-deck = []
-for deck in range(0,13):
-    
-
-
-
+deck = [1, 3, 25, 69, "Strings", "H"]
+print(deck[5])
+# for card in range(0, 13):
+#     deck = deck + card
+#
+#
+#
+#
+# print(deck)
