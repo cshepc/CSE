@@ -152,10 +152,8 @@ print(len(cheeseburger_ingredients))
 for generic_item_name in cheeseburger_ingredients:
     print(generic_item_name)
 
-
 for h in the_count:
     print(h * 2)
-
 
 length = len(cheeseburger_ingredients)
 range(5)  # A list of the numbers 0 through 4
@@ -165,3 +163,35 @@ for num in range(len(cheeseburger_ingredients)):
     item = cheeseburger_ingredients[num]
     print("The item at index %d is %s" % (num, item))
 
+# Recasting into a list
+
+strOne = "Hello World!"
+listOne = list(strOne)
+print(listOne)
+listOne[11] = '.'
+print(listOne)
+print(listOne[-1])
+
+
+# Adding things to a list
+cheeseburger_ingredients.append("Fries")
+print(cheeseburger_ingredients)
+cheeseburger_ingredients.append("teeth")
+
+# Removing things from a list
+cheeseburger_ingredients.pop(1)
+print(cheeseburger_ingredients)
+cheeseburger_ingredients.remove("cheese")
+print(cheeseburger_ingredients)
+
+# Getting the alphabet
+import string
+print(string.ascii_letters)
+print(string.ascii_lowercase)
+print(string.punctuation)
+
+
+# Making things lowercase
+strTwo = "ThIs Is A VeRy oDd sEnTeNce"
+lowercase = strTwo.lower()
+print(lowercase)
