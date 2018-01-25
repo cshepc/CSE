@@ -1,58 +1,23 @@
 import random
 
-deck = {}
-deck["ace of spades"] = 1
-deck['two of spades'] = 2
-deck['three of spades'] = 3
-deck['four of spades'] = 4
-deck['five of spades'] = 5
-deck['six of spades'] = 6
-deck['seven of spades'] = 7
-deck['eight of spades'] = 8
-deck['nine of spades'] = 9
-deck['ten of spades'] = 10
-deck['eleven of spades'] = 10
-deck['twelve of spades'] = 10
-deck['thirteen of spades'] = 10
-deck['ace of diamonds'] = 1
-deck['two of diamonds'] = 2
-deck['three of diamonds'] = 3
-deck['four of diamonds'] = 4
-deck['five of diamonds'] = 5
-deck['six of diamonds'] = 6
-deck['seven of diamonds'] = 7
-deck['eight of diamonds'] = 8
-deck['nine of diamonds'] = 9
-deck['ten of diamonds'] = 10
-deck['eleven of diamonds'] = 10
-deck['twelve of diamonds'] = 10
-deck['thirteen of diamonds'] = 10
-deck['ace of clubs'] = 1
-deck['two of clubs'] = 2
-deck['three of clubs'] = 3
-deck['four of clubs'] = 4
-deck['five of clubs'] = 5
-deck['six of clubs'] = 6
-deck['seven of clubs'] = 7
-deck['eight of clubs'] = 8
-deck['nine of clubs'] = 9
-deck['ten of clubs'] = 10
-deck['eleven of clubs'] = 10
-deck['twelve of clubs'] = 10
-deck['thirteen of clubs'] = 10
-deck['ace of hearts'] = 1
-deck['two of hearts'] = 2
-deck['three of hearts'] = 3
-deck['four of hearts'] = 4
-deck['five of hearts'] = 5
-deck['six of hearts'] = 6
-deck['seven of hearts'] = 7
-deck['eight of hearts'] = 8
-deck['nine of hearts'] = 9
-deck['ten of hearts'] = 10
-deck['eleven of hearts'] = 10
-deck['twelve of hearts'] = 10
-deck['thirteen of hearts'] = 10
+deck = {'Ace of hearts': 1, 'Ace of spades': 1, 'Ace of diamonds': 1, 'Ace of clubs': 1}
 
-player_choice = random.choice(deck.keys())
-print(player_choice)
+for card in range(1, 10):
+    deck['%i of hearts' % (card + 1)] = card + 1
+    deck['%i of spades' % (card + 1)] = card + 1
+    deck['%i of diamonds' % (card + 1)] = card + 1
+    deck['%i of clubs' % (card + 1)] = card + 1
+
+deck['Jack of hearts'] = 10
+deck['Jack of spades'] = 10
+deck['Jack of diamonds'] = 10
+deck['Jack of clubs'] = 10
+deck['Queen of hearts'] = 10
+deck['Queen of spades'] = 10
+deck['Queen of diamonds'] = 10
+deck['Queen of clubs'] = 10
+deck['King of hearts'] = 10
+deck['King of spades'] = 10
+deck['King of diamonds'] = 10
+deck['King of clubs'] = 10
+print(deck)
