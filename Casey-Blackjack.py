@@ -21,3 +21,4 @@ deck['King of spades'] = 10
 deck['King of diamonds'] = 10
 deck['King of clubs'] = 10
 print(deck)
+
