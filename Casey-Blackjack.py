@@ -1,24 +1,54 @@
 import random
 
-deck = {'Ace of hearts': 1, 'Ace of spades': 1, 'Ace of diamonds': 1, 'Ace of clubs': 1}
+ace = 1
+jack = 10
+queen = 10
+king = 10
 
-for card in range(1, 10):
-    deck['%i of hearts' % (card + 1)] = card + 1
-    deck['%i of spades' % (card + 1)] = card + 1
-    deck['%i of diamonds' % (card + 1)] = card + 1
-    deck['%i of clubs' % (card + 1)] = card + 1
+deck = [ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king]
+suits = ["diamonds", "hearts", "spades", "clubs"]
+suits = suits * 13
+deck = deck * 4
+card1 = random.choice(deck)
 
-deck['Jack of hearts'] = 10
-deck['Jack of spades'] = 10
-deck['Jack of diamonds'] = 10
-deck['Jack of clubs'] = 10
-deck['Queen of hearts'] = 10
-deck['Queen of spades'] = 10
-deck['Queen of diamonds'] = 10
-deck['Queen of clubs'] = 10
-deck['King of hearts'] = 10
-deck['King of spades'] = 10
-deck['King of diamonds'] = 10
-deck['King of clubs'] = 10
-print(deck)
+suit1 = random.choice(suits)
 
+print(card1)
+print(suit1)
+
+meme = []
+
+for card in range(0, 52):
+
+
+
+if card1 == deck[ace]:
+    print("Ace of %s" % suit1)
+    suits.remove(suit1)
+    deck.remove(card1)
+    print(len(suits))
+    print(len(deck))
+elif card1 == deck[jack]:
+    print("Jack of %s" % suit1)
+    suits.remove(suit1)
+    deck.remove(card1)
+    print(len(suits))
+    print(len(deck))
+elif card1 == deck[queen]:
+    print("Queen of %s" % suit1)
+    suits.remove(suit1)
+    deck.remove(card1)
+    print(len(suits))
+    print(len(deck))
+elif card1 == deck[king]:
+    print("King of %s" % suit1)
+    suits.remove(suit1)
+    deck.remove(card1)
+    print(len(suits))
+    print(len(deck))
+else:
+    print("%i of %s" % (card1, suit1))
+    suits.remove(suit1)
+    deck.remove(card1)
+    print(len(suits))
+    print(len(deck))
