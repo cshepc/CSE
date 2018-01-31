@@ -1,7 +1,10 @@
 import random
 
 deck = []
-
+Ace = 1
+Jack = 10
+Queen = 10
+King = 10
 for card in range(0, 13):
     card1 = card + 1
     # print(card1)
@@ -33,24 +36,21 @@ for card in range(0, 13):
 
     # print(deck)
 
-callDeck = deck
 # print(callDeck)
-flat_deck = [item for sublist in callDeck for item in sublist]
+flat_deck = [item for sublist in deck for item in sublist]
 # print(flat_deck)
 flat_deck[0] = "Ace"
 
-for num in range(0, 26):
+for num in range(0, 104):
 
-    if flat_deck[num + 1 * 2 - 1] == 1:
-        flat_deck[num + 1 * 2 - 1] = "Ace"
-
-    elif flat_deck[num + 1 * 2 - 1] == 11:
-        flat_deck[num + 1 * 2 - 1] = "Jack"
-
-    elif flat_deck[num + 1 * 2 - 1] == 12:
-        flat_deck[num + 1 * 2 - 1] = "Queen"
-
-    elif flat_deck[num + 1 * 2 - 1] == 13:
-        flat_deck[num + 1 * 2 - 1] = "King"
+    if flat_deck[num] == 1:
+        flat_deck[num] = Ace
+    elif flat_deck[num] == 11:
+        flat_deck[num] = Jack
+    elif flat_deck[num] == 12:
+        flat_deck[num] = Queen
+    elif flat_deck[num] == 13:
+        flat_deck[num] = King
 
 print(flat_deck)
+
