@@ -39,7 +39,7 @@ for card in range(0, 13):
 # print(callDeck)
 flat_deck = [item for sublist in deck for item in sublist]
 # print(flat_deck)
-flat_deck[0] = "Ace"
+flat_deck[0] = Ace
 
 for num in range(0, 104):
 
@@ -52,5 +52,28 @@ for num in range(0, 104):
     elif flat_deck[num] == 13:
         flat_deck[num] = King
 
-print(flat_deck)
+# print(flat_deck)
 
+
+for num in flat_deck:
+    card = [flat_deck[num], flat_deck[num + 1]]
+    print(card)
+    flat_deck[num] = card
+    print(flat_deck)
+    flat_deck.remove(flat_deck[num + 1])
+    print(flat_deck)
+#
+# card = [flat_deck[0], flat_deck[1]]
+# print(card)
+# print(flat_deck)
+# flat_deck[0] = card
+# flat_deck.remove(flat_deck[1])
+# print(flat_deck)
+#
+# card = [flat_deck[1], flat_deck[2]]
+# print(card)
+# print(flat_deck)
+# flat_deck[1] = card
+# flat_deck.remove(flat_deck[2])
+# print(flat_deck)
+#
