@@ -1,5 +1,4 @@
 import random
-import string
 
 word_bank = ["Tortoise", "Antidisestablishmentarianism", "Hungry", "Forgiveness", "Inconsolable", "Cataclysmic",
              "Euphoria", "Perjury", "Melancholy", "Photosynthetic", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
