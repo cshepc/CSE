@@ -103,14 +103,14 @@
 # It must take one parameter called "name"'''
 #
 #
-# def happy_bday(name):
+# def happy_birthday(name):
 #     print("Happy birthday to you,")
 #     print("Happy birthday to you,")
 #     print("Happy birthday dear " + name)
 #     print("Happy birthday to you.")
 #
 #
-# happy_bday("Casey")
+# happy_birthday("Casey")
 #
 # # Loops
 #
@@ -204,16 +204,19 @@
 dictionary = {"name": 'Lance', 'age': 26, 'height': 6 * 12 + 2}
 
 # Accessing things from a dictionary
-print(dictionary["name"])
-print(dictionary['age'])
-print(dictionary['height'])
+# print(dictionary["name"])
+# print(dictionary['age'])
+# print(dictionary['height'])
+
+# adding a pair to a dictionary
+dictionary["profession"] = "telemarketer"
 
 large_dictionary = {
     'CA': 'California',
     'AZ': 'Arizona',
     'NY': 'New York'
 }
-print(large_dictionary['NY'])
+# print(large_dictionary['NY'])
 
 larger_dictionary = {
     'CA': [
@@ -231,5 +234,42 @@ larger_dictionary = {
     ],
 }
 
-print(larger_dictionary['NY'])
-print(larger_dictionary['NY'][1])
+# print(larger_dictionary['NY'])
+# print(larger_dictionary['NY'][1])
+# print(larger_dictionary['AZ'][0])
+
+largest_dictionary = {
+    'CA': {
+        'NAME': 'California',
+        'POPULATION': 39250000,
+        'BORDER ST': [
+            'Oregon',
+            'Nevada',
+            'Arizona'
+        ]
+    },
+    'AZ': {
+        "NAME": 'Arizona',
+        'POPULATION': 6931000,
+        'BORDER ST': [
+            'California',
+            'Utah',
+            'Nevada',
+            'New Mexico'
+        ]
+    },
+    'NY': {
+        'NAME': "New York",
+        'POPULATION': 19750000,
+        'BORDER ST': [
+            'Vermont',
+            'Massachusetts',
+            'Connecticut',
+            'Pennsylvania',
+            'New Jersey'
+        ]
+    }
+}
+current_node = largest_dictionary['NY']
+print(current_node['NAME'])
+print(current_node['POPULATION'])
