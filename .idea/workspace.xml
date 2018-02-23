@@ -11,6 +11,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Function Notes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Function Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pythagorean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pythagorean.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class Notes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding>
+                <element signature="e#455#607#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - Dictionary World Map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="141" column="17" lean-forward="false" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
+              <folding>
+                <element signature="e#35#304#0" expanded="false" />
+                <element signature="e#327#708#0" expanded="false" />
+                <element signature="e#731#1032#0" expanded="false" />
+                <element signature="e#1060#1351#0" expanded="false" />
+                <element signature="e#1376#1716#0" expanded="false" />
+                <element signature="e#1739#1928#0" expanded="false" />
+                <element signature="e#1955#2279#0" expanded="false" />
+                <element signature="e#2301#2427#0" expanded="false" />
+                <element signature="e#2450#2740#0" expanded="false" />
+                <element signature="e#2765#3177#0" expanded="false" />
+                <element signature="e#3200#3467#0" expanded="false" />
+                <element signature="e#3495#3616#0" expanded="false" />
+                <element signature="e#3645#4022#0" expanded="false" />
+                <element signature="e#4047#4381#0" expanded="false" />
+                <element signature="e#4408#4726#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Notes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -20,48 +88,6 @@
                 <element signature="e#4334#4403#0" expanded="false" />
                 <element signature="e#4457#4659#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Casey - Dictionary World Map.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="158" column="43" lean-forward="false" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
-              <folding>
-                <element signature="e#35#304#0" expanded="false" />
-                <element signature="e#327#708#0" expanded="false" />
-                <element signature="e#731#1032#0" expanded="false" />
-                <element signature="e#1060#1348#0" expanded="false" />
-                <element signature="e#1373#1713#0" expanded="false" />
-                <element signature="e#1736#1925#0" expanded="false" />
-                <element signature="e#1952#2276#0" expanded="false" />
-                <element signature="e#2298#2424#0" expanded="false" />
-                <element signature="e#2447#2737#0" expanded="false" />
-                <element signature="e#3165#3286#0" expanded="false" />
-                <element signature="e#3518#3852#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Casey-Blackjack.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Casey-Blackjack.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Casey-Hangman.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Casey-Hangman.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -100,12 +126,16 @@
         <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Casey-Hangman.py" />
         <option value="$PROJECT_DIR$/Casey - Dictionary World Map.py" />
+        <option value="$PROJECT_DIR$/Function Notes.py" />
+        <option value="$PROJECT_DIR$/pythagorean.py" />
+        <option value="$PROJECT_DIR$/Class Notes.py" />
+        <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-27" />
-    <option name="y" value="-19" />
+    <option name="x" value="185" />
+    <option name="y" value="-13" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -125,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,7 +168,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Casey - Dictionary World Map">
+  <component name="RunManager" selected="Python.Class Notes">
     <configuration name="Casey - Dictionary World Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -179,7 +209,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Casey-Blackjack" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Class Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -191,12 +221,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey-Blackjack.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class Notes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Casey-Hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Function Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -208,7 +238,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey-Hangman.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Function Notes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,19 +278,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Casey-Blackjack" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Notes" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Casey-Hangman" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Casey - Dictionary World Map" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Casey - Dictionary World Map" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Function Notes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Class Notes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Casey - Dictionary World Map" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Notes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Casey-Blackjack" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Casey-Hangman" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Class Notes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Function Notes" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Casey - Dictionary World Map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Notes" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -284,12 +314,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2942899" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.11200586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43898574" sideWeight="0.88799417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.88799417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -329,43 +359,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="43" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Casey-Blackjack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Casey-Lucky7's.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Warmups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
@@ -664,18 +662,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey-Blackjack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey-Hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Function Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -691,30 +695,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey-Hangman.py">
+    <entry file="file://$PROJECT_DIR$/pythagorean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey-Blackjack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="158" column="43" lean-forward="false" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+        <state relative-caret-position="510">
+          <caret line="141" column="17" lean-forward="false" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
           <folding>
             <element signature="e#35#304#0" expanded="false" />
             <element signature="e#327#708#0" expanded="false" />
             <element signature="e#731#1032#0" expanded="false" />
-            <element signature="e#1060#1348#0" expanded="false" />
-            <element signature="e#1373#1713#0" expanded="false" />
-            <element signature="e#1736#1925#0" expanded="false" />
-            <element signature="e#1952#2276#0" expanded="false" />
-            <element signature="e#2298#2424#0" expanded="false" />
-            <element signature="e#2447#2737#0" expanded="false" />
-            <element signature="e#3165#3286#0" expanded="false" />
-            <element signature="e#3518#3852#0" expanded="false" />
+            <element signature="e#1060#1351#0" expanded="false" />
+            <element signature="e#1376#1716#0" expanded="false" />
+            <element signature="e#1739#1928#0" expanded="false" />
+            <element signature="e#1955#2279#0" expanded="false" />
+            <element signature="e#2301#2427#0" expanded="false" />
+            <element signature="e#2450#2740#0" expanded="false" />
+            <element signature="e#2765#3177#0" expanded="false" />
+            <element signature="e#3200#3467#0" expanded="false" />
+            <element signature="e#3495#3616#0" expanded="false" />
+            <element signature="e#3645#4022#0" expanded="false" />
+            <element signature="e#4047#4381#0" expanded="false" />
+            <element signature="e#4408#4726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#455#607#0" expanded="false" />
           </folding>
         </state>
       </provider>

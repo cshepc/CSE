@@ -36,8 +36,8 @@ world_map = {
         'DESCRIPTION': 'You are in a room with a staircase leading up to a door. THe door appears locked. '
                        'There is a door to the west.',
         'PATHS': {
-            'WEST': 'HALL1',
-            'UP': 'STAIRCASE2'
+            'WEST': 'HALL1'
+            # , 'UP': 'STAIRCASE2'
         }
     },
     # 5
@@ -91,7 +91,8 @@ world_map = {
     # 10
     'ARMORY': {
         'NAME': 'ARMORY',
-        'DESCRIPTION': 'TEXT',
+        'DESCRIPTION': 'You are in the armory. There is a bulletproof vest on a table in the middle of the room with'
+                       ' three shotgun shells in it. There are doors to the north, south, east and west.',
         'PATHS': {
             'SOUTH': 'HALL2',
             'NORTH': 'GUARDHOUSE',
@@ -102,7 +103,8 @@ world_map = {
     # 11
     'KEY2': {
         'NAME': 'Staircase Key Room',
-        'DESCRIPTION': 'TEXT',
+        'DESCRIPTION': 'You are in a very dimly lit room. There is a small key on the floor in the corner. There is a '
+                       'door to the east.',
         'PATHS': {
             'EAST': 'ARMORY'
         }
@@ -115,27 +117,32 @@ world_map = {
             'WEST': 'ARMORY'
         }
     },
+    # 13
     'GUARDHOUSE': {
         'NAME': 'Guards\' Quarters',
-        'DESCRIPTION': 'FFF',
+        'DESCRIPTION': 'You are in a room that seems to be the old guard\'s quarters. There is a bed on the wall with a'
+                       ' backpack on it. There are doors to the south, north, and east.',
         'PATHS': {
             'SOUTH': 'ARMORY',
             'NORTH': 'GAMEROOM',
             'EAST': 'TUNNEL'
         }
     },
+    # 14
     'TUNNEL': {
         'NAME': 'Secret Tunnel',
-        'DESCRIPTION': 'You are in a secret tunnel that starts goind east, slopes down south, and then curves back '
+        'DESCRIPTION': 'You are in a secret tunnel that starts going east, slopes down south, and then curves back '
                        'west. There is a door to the north and to the south.',
         'PATHS': {
             'NORTH': 'GUARDHOUSE',
             'SOUTH': 'STAIRCASE1'
         }
     },
+    # 15
     'GAMEROOM': {
         'NAME': 'Game Room',
-        'DESCRIPTION': '',
+        'DESCRIPTION': 'You are in a game room. There are arcade games on the wall, and in the middle there is a pool '
+                       'table with some pool balls and cues on it. There is a door to the south.',
         'PATHS': {
             'SOUTH': 'GUARDHOUSE'
         }
