@@ -9,40 +9,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CSE" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Casey - Dictionary World Map.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-239">
-              <caret line="66" column="79" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="66" selection-end-column="79" />
-              <folding>
-                <element signature="e#35#304#0" expanded="false" />
-                <element signature="e#327#708#0" expanded="false" />
-                <element signature="e#731#1032#0" expanded="false" />
-                <element signature="e#1060#1351#0" expanded="false" />
-                <element signature="e#1376#1716#0" expanded="false" />
-                <element signature="e#1433#1559#0" expanded="false" />
-                <element signature="e#1578#1710#0" expanded="false" />
-                <element signature="e#1739#1928#0" expanded="false" />
-                <element signature="e#2301#2427#0" expanded="false" />
-                <element signature="e#2450#2740#0" expanded="false" />
-                <element signature="e#2765#3177#0" expanded="false" />
-                <element signature="e#3200#3467#0" expanded="false" />
-                <element signature="e#3495#3616#0" expanded="false" />
-                <element signature="e#3645#4022#0" expanded="false" />
-                <element signature="e#4047#4381#0" expanded="false" />
-                <element signature="e#4408#4726#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#455#607#0" expanded="false" />
                 <element signature="e#672#842#0" expanded="false" />
@@ -51,6 +27,10 @@
                 <element signature="e#1440#1574#0" expanded="false" />
                 <element signature="e#1742#1767#0" expanded="false" />
                 <element signature="e#1812#1965#0" expanded="false" />
+                <element signature="e#2034#2172#0" expanded="false" />
+                <element signature="e#2253#2394#0" expanded="false" />
+                <element signature="e#2465#2656#0" expanded="false" />
+                <element signature="e#2762#2912#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,19 +69,19 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Casey-Hangman.py" />
-        <option value="$PROJECT_DIR$/Casey - Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/Function Notes.py" />
         <option value="$PROJECT_DIR$/pythagorean.py" />
         <option value="$PROJECT_DIR$/Class Notes.py" />
+        <option value="$PROJECT_DIR$/Casey - Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="185" />
-    <option name="y" value="-13" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="46" />
+    <option name="y" value="-16" />
+    <option name="width" value="1375" />
+    <option name="height" value="704" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -119,7 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,7 +111,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,8 +256,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.11713031" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -285,7 +266,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.8828697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977813" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -302,7 +283,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="60" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -311,10 +292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -337,10 +314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -363,10 +336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -389,10 +358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -415,10 +380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -441,10 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -467,10 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,10 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,10 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
           <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,10 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,10 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,10 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,10 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,10 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4386">
           <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
-          <folding>
-            <element signature="e#4334#4403#0" expanded="false" />
-            <element signature="e#4457#4659#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,14 +580,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239">
-          <caret line="66" column="79" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="66" selection-end-column="79" />
+        <state relative-caret-position="221">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="e#35#304#0" expanded="false" />
             <element signature="e#327#708#0" expanded="false" />
@@ -674,22 +596,22 @@
             <element signature="e#1433#1559#0" expanded="false" />
             <element signature="e#1578#1710#0" expanded="false" />
             <element signature="e#1739#1928#0" expanded="false" />
-            <element signature="e#2301#2427#0" expanded="false" />
-            <element signature="e#2450#2740#0" expanded="false" />
-            <element signature="e#2765#3177#0" expanded="false" />
-            <element signature="e#3200#3467#0" expanded="false" />
-            <element signature="e#3495#3616#0" expanded="false" />
-            <element signature="e#3645#4022#0" expanded="false" />
-            <element signature="e#4047#4381#0" expanded="false" />
-            <element signature="e#4408#4726#0" expanded="false" />
+            <element signature="e#1955#2279#0" expanded="false" />
+            <element signature="e#2301#2519#0" expanded="false" />
+            <element signature="e#2542#2832#0" expanded="false" />
+            <element signature="e#2857#3269#0" expanded="false" />
+            <element signature="e#3292#3559#0" expanded="false" />
+            <element signature="e#3737#4114#0" expanded="false" />
+            <element signature="e#4139#4473#0" expanded="false" />
+            <element signature="e#4500#4818#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#455#607#0" expanded="false" />
             <element signature="e#672#842#0" expanded="false" />
@@ -698,6 +620,10 @@
             <element signature="e#1440#1574#0" expanded="false" />
             <element signature="e#1742#1767#0" expanded="false" />
             <element signature="e#1812#1965#0" expanded="false" />
+            <element signature="e#2034#2172#0" expanded="false" />
+            <element signature="e#2253#2394#0" expanded="false" />
+            <element signature="e#2465#2656#0" expanded="false" />
+            <element signature="e#2762#2912#0" expanded="false" />
           </folding>
         </state>
       </provider>

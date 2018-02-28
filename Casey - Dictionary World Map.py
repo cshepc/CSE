@@ -73,7 +73,7 @@ world_map = {
     # 8
     'KEY1': {
         'NAME': "Key Room #1",
-        'DESCRIPTION': '',
+        'DESCRIPTION': 'You are in a room with a small table in the center. THere is a large brass key on the table.',
         'PATHS': {
             'EAST': 'GUARDROOM'
         }
