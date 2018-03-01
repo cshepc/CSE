@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" line="16" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfacdae-1e76-4316-9f04-2f69c70b4c56" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,20 +20,49 @@
       <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="-78">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <element signature="e#455#607#0" expanded="false" />
-                <element signature="e#672#842#0" expanded="false" />
-                <element signature="e#951#1137#0" expanded="false" />
-                <element signature="e#1222#1368#0" expanded="false" />
-                <element signature="e#1440#1574#0" expanded="false" />
-                <element signature="e#1742#1767#0" expanded="false" />
-                <element signature="e#1812#1965#0" expanded="false" />
-                <element signature="e#2034#2172#0" expanded="false" />
-                <element signature="e#2253#2394#0" expanded="false" />
-                <element signature="e#2465#2656#0" expanded="false" />
-                <element signature="e#2762#2912#0" expanded="false" />
+                <element signature="e#715#867#0" expanded="false" />
+                <element signature="e#932#1102#0" expanded="false" />
+                <element signature="e#1211#1397#0" expanded="false" />
+                <element signature="e#1482#1628#0" expanded="false" />
+                <element signature="e#1700#1834#0" expanded="false" />
+                <element signature="e#2069#2222#0" expanded="false" />
+                <element signature="e#2291#2429#0" expanded="false" />
+                <element signature="e#2510#2651#0" expanded="false" />
+                <element signature="e#2722#2913#0" expanded="false" />
+                <element signature="e#3019#3169#0" expanded="false" />
+                <element signature="e#3485#3729#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - Dictionary World Map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding>
+                <element signature="e#12#4820#0" expanded="false" />
+                <element signature="e#35#304#0" expanded="false" />
+                <element signature="e#327#708#0" expanded="false" />
+                <element signature="e#731#1032#0" expanded="false" />
+                <element signature="e#1060#1351#0" expanded="false" />
+                <element signature="e#1376#1716#0" expanded="false" />
+                <element signature="e#1433#1559#0" expanded="false" />
+                <element signature="e#1578#1710#0" expanded="false" />
+                <element signature="e#1739#1928#0" expanded="false" />
+                <element signature="e#1955#2279#0" expanded="false" />
+                <element signature="e#2301#2519#0" expanded="false" />
+                <element signature="e#2542#2832#0" expanded="false" />
+                <element signature="e#2857#3269#0" expanded="false" />
+                <element signature="e#3292#3559#0" expanded="false" />
+                <element signature="e#3587#3708#0" expanded="false" />
+                <element signature="e#3737#4114#0" expanded="false" />
+                <element signature="e#4139#4473#0" expanded="false" />
+                <element signature="e#4500#4818#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,9 +110,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="-16" />
-    <option name="width" value="1375" />
+    <option name="x" value="165" />
+    <option name="y" value="-12" />
+    <option name="width" value="863" />
     <option name="height" value="704" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -258,12 +290,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4781582" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.11713031" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.12225476" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.8828697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24405706" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
@@ -283,7 +315,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="62" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -585,9 +617,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
+            <element signature="e#12#4820#0" expanded="false" />
             <element signature="e#35#304#0" expanded="false" />
             <element signature="e#327#708#0" expanded="false" />
             <element signature="e#731#1032#0" expanded="false" />
@@ -601,6 +634,7 @@
             <element signature="e#2542#2832#0" expanded="false" />
             <element signature="e#2857#3269#0" expanded="false" />
             <element signature="e#3292#3559#0" expanded="false" />
+            <element signature="e#3587#3708#0" expanded="false" />
             <element signature="e#3737#4114#0" expanded="false" />
             <element signature="e#4139#4473#0" expanded="false" />
             <element signature="e#4500#4818#0" expanded="false" />
@@ -610,20 +644,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="-78">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#455#607#0" expanded="false" />
-            <element signature="e#672#842#0" expanded="false" />
-            <element signature="e#951#1137#0" expanded="false" />
-            <element signature="e#1222#1368#0" expanded="false" />
-            <element signature="e#1440#1574#0" expanded="false" />
-            <element signature="e#1742#1767#0" expanded="false" />
-            <element signature="e#1812#1965#0" expanded="false" />
-            <element signature="e#2034#2172#0" expanded="false" />
-            <element signature="e#2253#2394#0" expanded="false" />
-            <element signature="e#2465#2656#0" expanded="false" />
-            <element signature="e#2762#2912#0" expanded="false" />
+            <element signature="e#715#867#0" expanded="false" />
+            <element signature="e#932#1102#0" expanded="false" />
+            <element signature="e#1211#1397#0" expanded="false" />
+            <element signature="e#1482#1628#0" expanded="false" />
+            <element signature="e#1700#1834#0" expanded="false" />
+            <element signature="e#2069#2222#0" expanded="false" />
+            <element signature="e#2291#2429#0" expanded="false" />
+            <element signature="e#2510#2651#0" expanded="false" />
+            <element signature="e#2722#2913#0" expanded="false" />
+            <element signature="e#3019#3169#0" expanded="false" />
+            <element signature="e#3485#3729#0" expanded="false" />
           </folding>
         </state>
       </provider>

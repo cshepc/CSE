@@ -14,6 +14,19 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
+class Color:  # colored text
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    DARKCYAN = '\033[36m'
+    BLUE = '\033[94m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
+
+
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
                      'hangs slightly ajar to the north.', 'hall1', None, None, None, None, None)
 hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north end there is a door. There is a door to'
@@ -26,8 +39,8 @@ staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to
                                'There is a door to the west.', None, None, None, 'hall1', None, None)
 shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. There are doors to the north, south, east'
                                ', and west.', 'hall2', 'hall1', 'well1', 'guardroom', None, None)
-well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west.', None, None, None, 'shot'
-             'gun', None, None)
+well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west.', None, None, None,
+             'shotgun', None, None)
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
                                'door to the east and o the west.', None, None, 'shotgun', 'key1', None, None)
 key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a large brass key on the table. '
@@ -39,18 +52,26 @@ armory = Room('Armory', 'You are in the armory. There is a bulletproof vest on a
               'hall2', 'cafeteria', 'key2', None, None)
 key2 = Room('Staircase Key Room', 'You are in a very dimly lit room. There is a small key on the floor in the corner. '
                                   'There is a door to the east.', None, None, 'armory', None, None, None)
-# cafeteria = Room()
-# guardhouse = Room()
-# tunnel = Room()
-# gameroom = Room()
+cafeteria = Room('Cafeteria', 'You walk in to what appears to be the former prison cafeteria. There is a bag on one of '
+                              'the tables. There is a door to the west.', None, None, None, 'armory', None, None)
+guardhouse = Room('Guards\' Quarters', 'You are in a room that seems to be the old guard\'s quarters. There is a bed on'
+                                       ' the wall with a backpack on it. There are doors to the south, north, and '
+                                       'east.', 'gameroom', 'armory', 'tunnel', None, None, None)
+tunnel = Room('Secret Tunnel', 'You are in a secret tunnel that starts going east, slopes down south, and then curves '
+              'back west. There is a door to the north and to the south.', 'guardhouse', 'staircase1', None, None, None,
+              None)
+gameroom = Room('Game Room', 'You are in a game room. There are arcade games on the wall, and in the middle there is a '
+                'pool table with some pool balls and cues on it. There is a door to the south.', None, 'guardhouse',
+                None, None, None, None)
 current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 
 while True:
-    print('\n' + current_node.name + '\n' + current_node.description)
+    print('\n' + Color.GREEN + current_node.name + Color.END + '\n' + current_node.description)
     command = input(">_")
     if command == 'quit':
+        print("Thanks for Playing!")
         quit(0)
     if command in short_directions:
         command = directions[short_directions.index(command)]
