@@ -17,7 +17,7 @@ class Room(object):
 class Color:  # colored text
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
-    DARKCYAN = '\033[36m'
+    DARK_CYAN = '\033[36m'
     BLUE = '\033[94m'
     GREEN = '\033[32m'
     YELLOW = '\033[93m'
@@ -68,11 +68,13 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 
 while True:
-    print('\n' + Color.GREEN + current_node.name + Color.END + '\n' + current_node.description)
+    print('\n' + Color.BLUE + current_node.name + Color.END + '\n' + current_node.description)
     command = input(">_")
     if command == 'quit':
         print("Thanks for Playing!")
         quit(0)
+    if command == 'jump':
+        print(Color.YELLOW + "Wheeeeee!" + Color.END)
     if command in short_directions:
         command = directions[short_directions.index(command)]
     if command in directions:
