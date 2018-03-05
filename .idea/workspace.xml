@@ -20,23 +20,23 @@
       <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="e#716#868#0" expanded="false" />
-                <element signature="e#933#1103#0" expanded="false" />
-                <element signature="e#1212#1398#0" expanded="false" />
-                <element signature="e#1483#1629#0" expanded="false" />
-                <element signature="e#1701#1835#0" expanded="false" />
-                <element signature="e#2070#2223#0" expanded="false" />
-                <element signature="e#2292#2430#0" expanded="false" />
-                <element signature="e#2511#2652#0" expanded="false" />
-                <element signature="e#2723#2914#0" expanded="false" />
-                <element signature="e#3020#3170#0" expanded="false" />
-                <element signature="e#3242#3405#0" expanded="false" />
-                <element signature="e#3486#3730#0" expanded="false" />
-                <element signature="e#3813#3975#0" expanded="false" />
-                <element signature="e#4072#4259#0" expanded="false" />
+                <element signature="e#650#802#0" expanded="false" />
+                <element signature="e#867#1037#0" expanded="false" />
+                <element signature="e#1146#1332#0" expanded="false" />
+                <element signature="e#1417#1563#0" expanded="false" />
+                <element signature="e#1635#1769#0" expanded="false" />
+                <element signature="e#2004#2157#0" expanded="false" />
+                <element signature="e#2226#2364#0" expanded="false" />
+                <element signature="e#2445#2586#0" expanded="false" />
+                <element signature="e#2657#2848#0" expanded="false" />
+                <element signature="e#2954#3104#0" expanded="false" />
+                <element signature="e#3176#3339#0" expanded="false" />
+                <element signature="e#3420#3664#0" expanded="false" />
+                <element signature="e#3747#3909#0" expanded="false" />
+                <element signature="e#4006#4193#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,7 +120,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -133,24 +133,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSE" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -318,7 +304,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="84" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -647,23 +633,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#716#868#0" expanded="false" />
-            <element signature="e#933#1103#0" expanded="false" />
-            <element signature="e#1212#1398#0" expanded="false" />
-            <element signature="e#1483#1629#0" expanded="false" />
-            <element signature="e#1701#1835#0" expanded="false" />
-            <element signature="e#2070#2223#0" expanded="false" />
-            <element signature="e#2292#2430#0" expanded="false" />
-            <element signature="e#2511#2652#0" expanded="false" />
-            <element signature="e#2723#2914#0" expanded="false" />
-            <element signature="e#3020#3170#0" expanded="false" />
-            <element signature="e#3242#3405#0" expanded="false" />
-            <element signature="e#3486#3730#0" expanded="false" />
-            <element signature="e#3813#3975#0" expanded="false" />
-            <element signature="e#4072#4259#0" expanded="false" />
+            <element signature="e#650#802#0" expanded="false" />
+            <element signature="e#867#1037#0" expanded="false" />
+            <element signature="e#1146#1332#0" expanded="false" />
+            <element signature="e#1417#1563#0" expanded="false" />
+            <element signature="e#1635#1769#0" expanded="false" />
+            <element signature="e#2004#2157#0" expanded="false" />
+            <element signature="e#2226#2364#0" expanded="false" />
+            <element signature="e#2445#2586#0" expanded="false" />
+            <element signature="e#2657#2848#0" expanded="false" />
+            <element signature="e#2954#3104#0" expanded="false" />
+            <element signature="e#3176#3339#0" expanded="false" />
+            <element signature="e#3420#3664#0" expanded="false" />
+            <element signature="e#3747#3909#0" expanded="false" />
+            <element signature="e#4006#4193#0" expanded="false" />
           </folding>
         </state>
       </provider>

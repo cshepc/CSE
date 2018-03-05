@@ -1,3 +1,6 @@
+from colorama import Fore, Style
+
+
 class Room(object):
     def __init__(self, name, description, north, south, east, west, up, down):
         self.name = name
@@ -14,17 +17,11 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-class Color:  # colored text
-    PURPLE = '\033[95m'
-    CYAN = '\033[96m'
-    DARK_CYAN = '\033[36m'
-    BLUE = '\033[94m'
-    GREEN = '\033[32m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    END = '\033[0m'
+class Character(object):
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.alive = True
 
 
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
@@ -68,19 +65,19 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 
 while True:
-    print('\n' + Color.BLUE + current_node.name + Color.END + '\n' + current_node.description)
-    command = input(">_")
+    print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL + '\n' + current_node.description)
+    command = input(">_").lower().strip()
     if command == 'quit':
         print("Thanks for Playing!")
         quit(0)
-    if command == 'jump':
-        print(Color.YELLOW + "Wheeeeee!" + Color.END)
-    if command in short_directions:
+    elif command in short_directions:
         command = directions[short_directions.index(command)]
     if command in directions:
         try:
             current_node.move(command)
         except KeyError:
             print("You cannot go this way")
+    elif command == 'jump':
+        print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
     else:
-        print("Command not recognized")
+        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
