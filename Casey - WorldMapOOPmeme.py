@@ -1,6 +1,13 @@
 from colorama import Fore, Style
 
 
+class Settings:
+    main_health = 10
+    main_hunger = 50
+    main_inventory = 100
+    main_items = []
+
+
 class Room(object):
     def __init__(self, name, description, north, south, east, west, up, down):
         self.name = name
@@ -11,10 +18,39 @@ class Room(object):
         self.west = west
         self.up = up
         self.down = down
+        self.items = []
 
     def move(self, direction):
         global current_node
         current_node = globals()[getattr(self, direction)]
+
+
+class Item(object):
+    def __init__(self, name, description, inventory_space):
+        self.name = name
+        self.description = description
+        self.inventory_space = inventory_space
+        self.picked_up = False
+
+    def pick_up(self):
+        if self.picked_up:
+            print("You are already carrying the %s." % self.name)
+        elif Settings.main_inventory < self.inventory_space:
+            print(Fore.RED + "Your inventory is full." + Style.RESET_ALL)
+        else:
+            self.picked_up = True
+            current_node.items.remove(self)
+            Settings.main_items.append(self)
+            Settings.main_inventory = Settings.main_inventory - self.inventory_space
+            print('You picked up the %s' % self.name)
+
+    def put_down(self):
+        if self.picked_up:
+            self.picked_up = False
+            current_node.items.append(self)
+            Settings.main_items.remove(self)
+            Settings.main_inventory += self.inventory_space
+            print('You put down the %s' % self.name)
 
 
 class Character(object):
@@ -22,10 +58,14 @@ class Character(object):
         self.name = name
         self.description = description
         self.alive = True
+        self.inventory = []
 
 
+player = Character("Casey", "Me")
+testItem = Item('test', 'Test Item', 20)
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
                      'hangs slightly ajar to the north.', 'hall1', None, None, None, None, None)
+cell1.items.append(testItem)
 hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north end there is a door. There is a door to'
                         ' the south, and two doors to the east and west.', 'shotgun', 'cell1', 'staircase1', 'cell2',
              None, None)
@@ -63,10 +103,12 @@ gameroom = Room('Game Room', 'You are in a game room. There are arcade games on 
 current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
+long_test_name = list(testItem.name)
 
 while True:
     print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL + '\n' + current_node.description)
     command = input(">_").lower().strip()
+    long_command = list(command)
     if command == 'quit':
         print("Thanks for Playing!")
         quit(0)
@@ -79,5 +121,14 @@ while True:
             print("You cannot go this way")
     elif command == 'jump':
         print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
+    elif 'pick up' in command:
+        added = False
+        for item in current_node.items:
+            if command[7:] == item.name.lower():
+                player.inventory.append(item)
+                added = True
+        if not added:
+            print("I don't see it there")
+
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)

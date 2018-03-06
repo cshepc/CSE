@@ -1,11 +1,4 @@
-tester = ["primero", "segundo", "primero", "segundo"]
-test2 = []
-for num in tester:
-    test = [tester[-2], tester[-1]]
-
-    test2.append(test)
-    tester.remove(tester[-1])
-
-
-print(tester)
-print(test2)
+str1 = "cat dog"
+str2 = "cat"
+if str2 in str1:
+    print("Yay!")
