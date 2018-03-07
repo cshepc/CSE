@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" line="24" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" line="23" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfacdae-1e76-4316-9f04-2f69c70b4c56" name="Default" comment="" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+            <state relative-caret-position="340">
+              <caret line="20" column="23" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="e#1923#2075#0" expanded="false" />
                 <element signature="e#2169#2339#0" expanded="false" />
@@ -38,6 +38,16 @@
                 <element signature="e#5049#5211#0" expanded="false" />
                 <element signature="e#5308#5495#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - Charactersmeme.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +90,7 @@
         <option value="$PROJECT_DIR$/Casey - Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
+        <option value="$PROJECT_DIR$/Casey - Charactersmeme.py" />
       </list>
     </option>
   </component>
@@ -105,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,7 +128,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -294,20 +305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - guessgame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Warmups.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -565,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4182">
           <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,26 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-          <folding>
-            <element signature="e#12#4820#0" expanded="false" />
-            <element signature="e#35#304#0" expanded="false" />
-            <element signature="e#327#708#0" expanded="false" />
-            <element signature="e#731#1032#0" expanded="false" />
-            <element signature="e#1060#1351#0" expanded="false" />
-            <element signature="e#1376#1716#0" expanded="false" />
-            <element signature="e#1433#1559#0" expanded="false" />
-            <element signature="e#1578#1710#0" expanded="false" />
-            <element signature="e#1739#1928#0" expanded="false" />
-            <element signature="e#1955#2279#0" expanded="false" />
-            <element signature="e#2301#2519#0" expanded="false" />
-            <element signature="e#2542#2832#0" expanded="false" />
-            <element signature="e#2857#3269#0" expanded="false" />
-            <element signature="e#3292#3559#0" expanded="false" />
-            <element signature="e#3587#3708#0" expanded="false" />
-            <element signature="e#3737#4114#0" expanded="false" />
-            <element signature="e#4139#4473#0" expanded="false" />
-            <element signature="e#4500#4818#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -600,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,22 +583,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+        <state relative-caret-position="340">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="e#1923#2075#0" expanded="false" />
             <element signature="e#2169#2339#0" expanded="false" />
@@ -640,6 +614,22 @@
             <element signature="e#5049#5211#0" expanded="false" />
             <element signature="e#5308#5495#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pip/_vendor/requests/packages/chardet/jisfreq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
