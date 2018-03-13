@@ -29,9 +29,8 @@ class Item(object):
 
 
 class Character(object):
-    def __init__(self, name, description, health, accuracy, base_damage, armor):
+    def __init__(self, name, health, accuracy, base_damage, armor):
         self.name = name
-        self.description = description
         self.health = health
         self.items = []
         self.inventory_space = 100
@@ -82,7 +81,7 @@ class Character(object):
 
 item = Item('item', 10, 10, 10, 0)
 item2 = Item('flashlight', 10, 10, 10, 0)
-main = Character('You', 'The main character', 100, 70, 10, 0)
+main = Character('You', 100, 70, 10, 0)
 room = Room("room", [item, item2])
 
 
