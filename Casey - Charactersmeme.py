@@ -63,7 +63,7 @@ class Character(object):
         print('%s put down the %s' % (main.name, thing.name))
 
     def attack(self, target):
-        chance_of_succeeding = self.accuracy * target.evasiveness
+        chance_of_succeeding = self.accuracy + target.evasiveness
         chance_of_succeeding = chance_of_succeeding / 2
         succeed_num = random.randint(1, 100)
         if chance_of_succeeding >= succeed_num:
