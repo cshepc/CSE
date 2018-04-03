@@ -70,7 +70,7 @@ hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north 
                         ' the south, and two doors to the east and west.', 'shotgun', 'cell1', 'staircase1', 'cell2',
              None, None)
 cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton lying on the bed, and a light bulb is '
-                                       'flickering above your head. There is a door behind you to th east',
+                                       'flickering above your head. There is a door behind you to the east',
              None, None, 'hall1', None, None, None)
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
                                'There is a door to the west.', None, None, None, 'hall1', None, None)

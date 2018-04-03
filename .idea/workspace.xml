@@ -17,11 +17,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="84" column="89" lean-forward="true" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#73#670#0" expanded="false" />
+                <element signature="e#701#966#0" expanded="false" />
+                <element signature="e#997#1372#0" expanded="false" />
+                <element signature="e#1409#1826#0" expanded="false" />
+                <element signature="e#1853#2852#0" expanded="false" />
+                <element signature="e#2880#3043#0" expanded="false" />
+                <element signature="e#3067#3334#0" expanded="false" />
+                <element signature="e#3363#3764#0" expanded="false" />
+                <element signature="e#3794#4213#0" expanded="false" />
+                <element signature="e#4240#4687#0" expanded="false" />
+                <element signature="e#4719#5946#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1037">
+              <caret line="11" column="76" lean-forward="true" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casey - Charactersmeme.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Casey - ItemsMeme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Casey - ItemsMeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state relative-caret-position="467">
+              <caret line="110" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="110" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -30,18 +73,8 @@
       <file leaf-file-name="Inheritance Notes Meme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Inheritance Notes Meme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="260">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -86,12 +119,13 @@
         <option value="$PROJECT_DIR$/pythagorean.py" />
         <option value="$PROJECT_DIR$/Class Notes.py" />
         <option value="$PROJECT_DIR$/Casey - Dictionary World Map.py" />
-        <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
         <option value="$PROJECT_DIR$/Inheritance Notes Meme.py" />
         <option value="$PROJECT_DIR$/programmermeme.py" />
         <option value="$PROJECT_DIR$/Casey - Charactersmeme.py" />
         <option value="$PROJECT_DIR$/Casey - ItemsMeme.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
+        <option value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
       </list>
     </option>
   </component>
@@ -117,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,7 +164,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,12 +310,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.12225476" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931854" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931854" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
@@ -301,12 +335,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="105" />
+      <option name="time" value="107" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lucky7's.py" />
     <entry file="file://$PROJECT_DIR$/Casey - guessgame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -579,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/programmermeme.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -593,35 +619,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="65" column="46" lean-forward="false" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Inheritance Notes Meme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="260">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - ItemsMeme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - ItemsMeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="110" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="110" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037">
+          <caret line="11" column="76" lean-forward="true" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="84" column="89" lean-forward="true" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#73#670#0" expanded="false" />
+            <element signature="e#701#966#0" expanded="false" />
+            <element signature="e#997#1372#0" expanded="false" />
+            <element signature="e#1409#1826#0" expanded="false" />
+            <element signature="e#1853#2852#0" expanded="false" />
+            <element signature="e#2880#3043#0" expanded="false" />
+            <element signature="e#3067#3334#0" expanded="false" />
+            <element signature="e#3363#3764#0" expanded="false" />
+            <element signature="e#3794#4213#0" expanded="false" />
+            <element signature="e#4240#4687#0" expanded="false" />
+            <element signature="e#4719#5946#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

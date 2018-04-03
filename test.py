@@ -3,6 +3,3 @@ if 'helmet' in dicti.values():
     print("yay")
 else:
     print('no')
-
-
-dicti.
