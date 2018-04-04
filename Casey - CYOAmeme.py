@@ -52,6 +52,16 @@ class HealthPack(Consumable):
         consumer.items.remove(self)
 
 
+class Ammo(Consumable):
+    def __init__(self, name, description, inventory_space, ammo):
+        super(Ammo, self).__init__(name, description, inventory_space)
+        self.ammo = ammo
+
+    def reload(self, gun, char):
+        gun.ammo += self.ammo
+        char.items.remove(self)
+
+
 class Weapon(Item):
     def __init__(self, name, description, inventory_space, damage, accuracy):
         super(Weapon, self).__init__(name, description, inventory_space)
@@ -83,6 +93,19 @@ class Weapon(Item):
 class Knife(Weapon):
     def __init__(self, name, description, inventory_space, damage, accuracy):
         super(Knife, self).__init__(name, description, inventory_space, damage, accuracy)
+
+
+class Gun(Weapon):
+    def __init__(self, name, description, inventory_space, damage, accuracy, ammunition):
+        super(Gun, self).__init__(name, description, inventory_space, damage, accuracy)
+        self.ammo = ammunition
+
+    def attack(self, attacker, target):
+        if self.ammo > 0:
+            target.take_damage(attacker, self)
+            self.ammo -= 1
+        else:
+            print("You are out of ammo.")
 
 
 class Key(Item):
@@ -177,6 +200,7 @@ class Character(object):
 
 
 knife = Knife('Small Knife', 'A small hunting knife', 20, 15, 90)
+shotgun = Gun("Shotgun", "A medium sized shotgun.", 40, 80, 60, 5)
 
-guardkey = Key('Guard Room Key', '', 5, hall2.north, armory)
-
+staircase_key = Key('Staircase Key', '', 5, staircase.up, stair2)
+guard_key = Key('Guard Room Key', '', 5, hall2.north, armory)
