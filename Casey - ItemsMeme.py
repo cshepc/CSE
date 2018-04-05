@@ -109,3 +109,65 @@ class Armor(Wearable):
             player.armor += self.armor
         else:
             print("You can't do that right now.")
+
+
+class Helmet(Armor):
+    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
+        super(Helmet, self).__init__(name, description, inventory_space, clothing_type)
+        self.armor = armor_boost
+
+    def get_equipped(self, player):
+        if not player.helmet_equipped:
+            player.helmet_equipped = True
+            player.armor += self.armor
+        else:
+            print("You can't do that right now.")
+
+
+class Chestplate(Armor):
+    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
+        super(Chestplate, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+
+    def get_equipped(self, player):
+        if not player.chestplate_equipped:
+            player.chestplate_equipped = True
+            player.armor += self.armor
+        else:
+            print("You can't do that right now.")
+
+
+class Leggings(Armor):
+    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
+        super(Leggings, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+
+    def get_equipped(self, player):
+        if not player.leggings_equipped:
+            player.leggings_equipped = True
+            player.armor += self.armor
+        else:
+            print("You can't do that right now.")
+
+
+class Boots(Armor):
+    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
+        super(Boots, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+
+    def get_equipped(self, player):
+        if not player.boots_equipped:
+            player.boots_equipped = True
+            player.armor += self.armor
+        else:
+            print("You can't do that right now.")
+
+
+class Gauntlets(Armor):
+    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
+        super(Gauntlets, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+
+    def get_equipped(self, player):
+        if not player.gauntlets_equipped:
+            player.gauntlets_equipped = True
+            player.armor += self.armor
+        else:
+            print("You can't do that right now.")
+
