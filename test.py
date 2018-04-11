@@ -1,5 +1,3 @@
-dicti = {'helmet': None, 'not': 'not'}
-if 'helmet' in dicti.values():
-    print("yay")
-else:
-    print('no')
+from math import sqrt
+def f(n):
+    return ((1+sqrt(5))**n-(1-sqrt(5))**n)/(2**n*sqrt(5))

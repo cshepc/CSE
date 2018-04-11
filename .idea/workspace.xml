@@ -20,8 +20,8 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="315" column="19" lean-forward="false" selection-start-line="315" selection-start-column="19" selection-end-line="315" selection-end-column="19" />
+            <state relative-caret-position="258">
+              <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#73#670#0" expanded="false" />
@@ -29,20 +29,33 @@
                 <element signature="e#997#1372#0" expanded="false" />
                 <element signature="e#1409#1826#0" expanded="false" />
                 <element signature="e#1857#2110#0" expanded="false" />
-                <element signature="e#2137#3136#0" expanded="false" />
-                <element signature="e#3164#3327#0" expanded="false" />
-                <element signature="e#3353#3754#0" expanded="false" />
-                <element signature="e#3778#4045#0" expanded="false" />
-                <element signature="e#4074#4475#0" expanded="false" />
-                <element signature="e#4505#4926#0" expanded="false" />
-                <element signature="e#4954#5379#0" expanded="false" />
-                <element signature="e#5411#5828#0" expanded="false" />
-                <element signature="e#5858#6269#0" expanded="false" />
-                <element signature="e#6296#6698#0" expanded="false" />
-                <element signature="e#6729#7143#0" expanded="false" />
-                <element signature="e#7167#7867#0" expanded="false" />
-                <element signature="e#7894#8384#0" expanded="false" />
-                <element signature="e#8416#10158#0" expanded="false" />
+                <element signature="e#2137#3141#0" expanded="false" />
+                <element signature="e#3169#3332#0" expanded="false" />
+                <element signature="e#3358#3759#0" expanded="false" />
+                <element signature="e#3783#4050#0" expanded="false" />
+                <element signature="e#4079#4480#0" expanded="false" />
+                <element signature="e#4510#4931#0" expanded="false" />
+                <element signature="e#4959#5364#0" expanded="false" />
+                <element signature="e#5396#5813#0" expanded="false" />
+                <element signature="e#5843#6254#0" expanded="false" />
+                <element signature="e#6281#6683#0" expanded="false" />
+                <element signature="e#6714#7128#0" expanded="false" />
+                <element signature="e#7152#7861#0" expanded="false" />
+                <element signature="e#7234#7357#0" expanded="false" />
+                <element signature="e#7407#7643#0" expanded="false" />
+                <element signature="e#7695#7861#0" expanded="false" />
+                <element signature="e#7888#8404#0" expanded="false" />
+                <element signature="e#8436#10231#0" expanded="false" />
+                <element signature="e#11485#11655#0" expanded="false" />
+                <element signature="e#12033#12179#0" expanded="false" />
+                <element signature="e#12259#12393#0" expanded="false" />
+                <element signature="e#12651#12804#0" expanded="false" />
+                <element signature="e#13064#13205#0" expanded="false" />
+                <element signature="e#13432#13572#0" expanded="false" />
+                <element signature="e#13769#13895#0" expanded="false" />
+                <element signature="e#13992#14236#0" expanded="false" />
+                <element signature="e#14333#14495#0" expanded="false" />
+                <element signature="e#14600#14787#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,8 +64,8 @@
       <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+            <state relative-caret-position="2278">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,7 +74,7 @@
       <file leaf-file-name="Casey - Charactersmeme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
+            <state relative-caret-position="352">
               <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
@@ -110,15 +123,15 @@
         <option value="$PROJECT_DIR$/Inheritance Notes Meme.py" />
         <option value="$PROJECT_DIR$/programmermeme.py" />
         <option value="$PROJECT_DIR$/Casey - Charactersmeme.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
         <option value="$PROJECT_DIR$/Casey - ItemsMeme.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="121" />
+    <option name="x" value="137" />
     <option name="y" value="-12" />
     <option name="width" value="863" />
     <option name="height" value="704" />
@@ -155,7 +168,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -175,7 +188,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.Casey - CYOAmeme">
+    <configuration name="Casey - CYOAmeme" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="Casey - Charactersmeme" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,23 +219,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey - Charactersmeme.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="Casey - WorldMapOOPmeme" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -262,19 +275,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Casey - WorldMapOOPmeme" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Casey - Charactersmeme" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Inheritance Notes Meme" />
-      <item index="4" class="java.lang.String" itemvalue="Python.programmermeme" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Casey - Charactersmeme" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Inheritance Notes Meme" />
+      <item index="3" class="java.lang.String" itemvalue="Python.programmermeme" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Casey - CYOAmeme" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.programmermeme" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Inheritance Notes Meme" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Casey - Charactersmeme" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Casey - WorldMapOOPmeme" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Casey - CYOAmeme" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.programmermeme" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Inheritance Notes Meme" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Casey - Charactersmeme" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +316,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.12225476" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931854" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31220284" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
@@ -323,18 +336,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="134" />
+      <option name="time" value="137" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Warmups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
@@ -558,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -576,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -607,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -628,26 +613,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
+        <state relative-caret-position="352">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
+    <entry file="file://$PROJECT_DIR$/Class Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+        <state relative-caret-position="216">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4440">
+          <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/colorama/ansi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1280">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="315" column="19" lean-forward="false" selection-start-line="315" selection-start-column="19" selection-end-line="315" selection-end-column="19" />
+        <state relative-caret-position="258">
+          <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#73#670#0" expanded="false" />
@@ -655,20 +672,33 @@
             <element signature="e#997#1372#0" expanded="false" />
             <element signature="e#1409#1826#0" expanded="false" />
             <element signature="e#1857#2110#0" expanded="false" />
-            <element signature="e#2137#3136#0" expanded="false" />
-            <element signature="e#3164#3327#0" expanded="false" />
-            <element signature="e#3353#3754#0" expanded="false" />
-            <element signature="e#3778#4045#0" expanded="false" />
-            <element signature="e#4074#4475#0" expanded="false" />
-            <element signature="e#4505#4926#0" expanded="false" />
-            <element signature="e#4954#5379#0" expanded="false" />
-            <element signature="e#5411#5828#0" expanded="false" />
-            <element signature="e#5858#6269#0" expanded="false" />
-            <element signature="e#6296#6698#0" expanded="false" />
-            <element signature="e#6729#7143#0" expanded="false" />
-            <element signature="e#7167#7867#0" expanded="false" />
-            <element signature="e#7894#8384#0" expanded="false" />
-            <element signature="e#8416#10158#0" expanded="false" />
+            <element signature="e#2137#3141#0" expanded="false" />
+            <element signature="e#3169#3332#0" expanded="false" />
+            <element signature="e#3358#3759#0" expanded="false" />
+            <element signature="e#3783#4050#0" expanded="false" />
+            <element signature="e#4079#4480#0" expanded="false" />
+            <element signature="e#4510#4931#0" expanded="false" />
+            <element signature="e#4959#5364#0" expanded="false" />
+            <element signature="e#5396#5813#0" expanded="false" />
+            <element signature="e#5843#6254#0" expanded="false" />
+            <element signature="e#6281#6683#0" expanded="false" />
+            <element signature="e#6714#7128#0" expanded="false" />
+            <element signature="e#7152#7861#0" expanded="false" />
+            <element signature="e#7234#7357#0" expanded="false" />
+            <element signature="e#7407#7643#0" expanded="false" />
+            <element signature="e#7695#7861#0" expanded="false" />
+            <element signature="e#7888#8404#0" expanded="false" />
+            <element signature="e#8436#10231#0" expanded="false" />
+            <element signature="e#11485#11655#0" expanded="false" />
+            <element signature="e#12033#12179#0" expanded="false" />
+            <element signature="e#12259#12393#0" expanded="false" />
+            <element signature="e#12651#12804#0" expanded="false" />
+            <element signature="e#13064#13205#0" expanded="false" />
+            <element signature="e#13432#13572#0" expanded="false" />
+            <element signature="e#13769#13895#0" expanded="false" />
+            <element signature="e#13992#14236#0" expanded="false" />
+            <element signature="e#14333#14495#0" expanded="false" />
+            <element signature="e#14600#14787#0" expanded="false" />
           </folding>
         </state>
       </provider>

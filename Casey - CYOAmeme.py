@@ -73,7 +73,7 @@ class Weapon(Item):
             room.items.remove(self)
             consumer.items.append(self)
             consumer.inventory_space -= self.inventory_space
-            consumer.damage += self.damage
+            consumer.base_damage += self.damage
             consumer.accuracy += self.accuracy
             consumer.accuracy = consumer.accuracy / 2
         else:
@@ -145,8 +145,7 @@ class Armor(Wearable):
 
 class Helmet(Armor):
     def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Helmet, self).__init__(name, description, inventory_space, clothing_type)
-        self.armor = armor_boost
+        super(Helmet, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.helmet_equipped:
@@ -210,18 +209,18 @@ class Bag(Item):
         self.items = items
         self.bag_space = bag_space
 
-    def put_in(self, item, character):
-        if self.bag_space >= item.inventory_space:
-            character.items.remove(item)
-            self.items.append(item)
-            self.bag_space -= item.inventory_space
+    def put_in(self, thing, character):
+        if self.bag_space >= thing.inventory_space:
+            character.items.remove(thing)
+            self.items.append(thing)
+            self.bag_space -= thing.inventory_space
         else:
             print("The %s is full" % self.name)
 
-    def take_out(self, item, character):
-        if item in self.items:
-            self.items.remove(item)
-            character.items.append(item)
+    def take_out(self, thing, character):
+        if thing in self.items:
+            self.items.remove(thing)
+            character.items.append(thing)
         else:
             print("You can't do that right now.")
 
@@ -238,6 +237,7 @@ class Room(object):
         self.down = down
         self.items = items
         self.characters = characters
+        self.first = True
 
     def move(self, direction):
         global current_node
@@ -269,16 +269,16 @@ class Character(object):
         self.boots_equipped = False
         self.gauntlets_equipped = False
 
-    def pick_up(self, item, room):
-        if item in self.items:
+    def pick_up(self, thing, room):
+        if thing in self.items:
             print("You are already carrying the item")
-        elif self.inventory_space < item.inventory_space:
+        elif self.inventory_space < thing.inventory_space:
             print("Your inventory is full.")
         else:
             item.get_picked_up(self, room)
 
-    def put_down(self, item, room):
-        item.get_put_down(self, room)
+    def put_down(self, thing, room):
+        thing.get_put_down(self, room)
 
     def attack(self, target):
         chance_of_succeeding = self.accuracy + target.evasiveness
@@ -289,40 +289,43 @@ class Character(object):
         else:
             print("%s missed." % self)
 
-    def take_damage(self, attacker):
+    def take_damage(self, attacker, room):
         damage_taken = attacker.base_damage - self.armor * 0.8
         self.health -= damage_taken
         if self.health <= 0:
             print('%s died.' % self.name)
+            room.items.append(self.items)
             self.alive = False
 
 
 # Items
 
 # Cell2
-knife = Knife('Small Knife', 'A small hunting knife', 20, 15, 90)
+knife = Knife('Small Knife', 'There is a small knife in the room.', 20, 15, 90)
 # Shotgun
-shotgun = Gun("Shotgun", "A medium sized shotgun.", 40, 80, 60, 5)
+shotgun = Gun("Shotgun", "There is a shotgun in the room.", 40, 80, 60, 5)
 # Armory
-kevlar_helmet = Helmet('Kevlar Helmet', 'A black kevlar helmet', 10, 'armor', 10)
-kevlar_chestplate = Chestplate('Kevlar Chestplate', 'A black kevlar chestplate', 30, 'armor', 20)
-kevlar_leggings = Leggings('Kevlar Leggings', 'A pair of black kevlar leggings', 20, 'armor', 15)
-steel_toed_boots = Boots('Steel Toed Boots', 'A pair of black steel toed boots', 10, 'armor', 10)
+kevlar_helmet = Helmet('Kevlar Helmet', 'There is a black kevlar helmet in the room.', 10, 'armor', 10)
+kevlar_chestplate = Chestplate('Kevlar Chestplate', 'There is a black kevlar chestplate in the room.', 30, 'armor', 20)
+kevlar_leggings = Leggings('Kevlar Leggings', 'There is a pair of black kevlar leggings in the room.', 20, 'armor', 15)
+steel_toed_boots = Boots('Steel Toed Boots', 'There is a  pair of black steel toed boots', 10, 'armor', 10)
 # Cafeteria
 apple = Food('Apple', 'A delicious looking apple', 5, 20)
 sandwich = Food('Sandwich', 'A turkey sandwich', 5, 40)
 lunchbag = Bag("Lunchbag", 'a paper bag', 20, [apple, sandwich], 10)
 # Guard House
-pistol = Gun(name, description, inventory_space, damage, accuracy, ammunition)
+pistol = Gun("Pistol", "A small black pistol", 20, 20, 70, 5)
+
+main_character = Character("You", 100, 90, 90, 10, 0, None, None, None, None, None)
 
 # Rooms
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
-                     'hangs slightly ajar to the north.', 'hall1', None, None, None, None, None, [])
+                     'hangs slightly ajar to the north.', 'hall1', None, None, None, None, None, [], [])
 hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north end there is a door. There is a door to'
                         ' the south, and two doors to the east and west.', 'shotgun', 'cell1', 'staircase1', 'cell2',
              None, None, [], [])
 cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton lying on the bed, and a light bulb is '
-             'flickering above your head. There is a door behind you to the east', None, None, 'hall1', None, None,
+             'flickering above your head. There is a door behind you to the east. ', None, None, 'hall1', None, None,
              None, [knife], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
                                'There is a door to the west.', None, None, None, 'hall1', None, None, [], [])
@@ -331,7 +334,7 @@ shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. Th
 well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west.', None, None, None,
              'shotgun', None, None, [], [])
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
-                               'door to the east and o the west.', None, None, 'shotgun', 'key1', None, None, [])
+                               'door to the east and o the west.', None, None, 'shotgun', 'key1', None, None, [], [])
 key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a door to the east.',
             None, None, 'guardroom', None, None, None, [], [])
 hall2 = Room('North/South Hallway', 'You are in a hallway with a door to the north and a door to the south. The north '
@@ -345,16 +348,62 @@ cafeteria = Room('Cafeteria', 'You walk in to what appears to be the former pris
                               'west.', None, None, None, 'armory', None, None, [lunchbag], [])
 guardhouse = Room('Guards\' Quarters', 'You are in a room that seems to be the old guard\'s quarters. There is a bed on'
                                        ' the wall with a backpack on it. There are doors to the south, north, and '
-                                       'east.', 'gameroom', 'armory', 'tunnel', None, None, None)
+                                       'east.', 'gameroom', 'armory', 'tunnel', None, None, None, [pistol], [])
 tunnel = Room('Secret Tunnel', 'You are in a secret tunnel that starts going east, slopes down south, and then curves '
               'back west. There is a door to the north and to the south.', 'guardhouse', 'staircase1', None, None, None,
               None, [], [])
 gameroom = Room('Game Room', 'You are in a game room. There are arcade games on the wall, and in the middle there is a '
                 'pool table with some pool balls and cues on it. There is a door to the south.', None, 'guardhouse',
-                None, None, None, None)
+                None, None, None, None, [], [])
 
 # Keys
-staircase_key = Key('Staircase Key', '', 5, staircase1.up, staircase2)
-key2.items.append(staircase_key)
+# staircase_key = Key('Staircase Key', '', 5, staircase1.up, staircase2)
+# key2.items.append(staircase_key)
 guard_key = Key('Guard Room Key', '', 5, hall2.north, armory)
 key1.items.append(guard_key)
+
+
+current_node = cell2
+directions = ['north', 'south', 'east', 'west', 'up', 'down']
+short_directions = ['n', 's', 'e', 'w', 'u', 'd']
+
+while True:
+    desc = ''
+    for item in current_node.items:
+        desc += item.description
+    print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL + '\n')
+    if current_node.first:
+        print(current_node.description + desc)
+
+    command = input(">_").lower().strip()
+    long_command = list(command)
+    if command == 'quit':
+        print("Thanks for Playing!")
+        quit(0)
+    elif command in short_directions:
+        command = directions[short_directions.index(command)]
+    if command in directions:
+        try:
+            current_node.move(command)
+        except KeyError:
+            print("You cannot go this way")
+    elif command == 'jump':
+        print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
+    elif command == 'l':
+        for item in current_node.items:
+            print(item.name)
+    elif command == 'i':
+        for item in main_character.items:
+            print(item.name)
+    elif 'pick up' in command:
+        added = False
+        for item in current_node.items:
+            if command[8:] == item.name.lower():
+                main_character.pick_up(item, current_node)
+                added = True
+                print("You picked up the %s" % item.name)
+        if not added:
+            print("I don't see it there")
+
+    else:
+        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
