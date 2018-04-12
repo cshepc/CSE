@@ -20,8 +20,8 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
+            <state relative-caret-position="83">
+              <caret line="367" column="78" lean-forward="false" selection-start-line="367" selection-start-column="78" selection-end-line="367" selection-end-column="78" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#73#670#0" expanded="false" />
@@ -32,30 +32,18 @@
                 <element signature="e#2137#3141#0" expanded="false" />
                 <element signature="e#3169#3332#0" expanded="false" />
                 <element signature="e#3358#3759#0" expanded="false" />
-                <element signature="e#3783#4050#0" expanded="false" />
-                <element signature="e#4079#4480#0" expanded="false" />
-                <element signature="e#4510#4931#0" expanded="false" />
-                <element signature="e#4959#5364#0" expanded="false" />
-                <element signature="e#5396#5813#0" expanded="false" />
-                <element signature="e#5843#6254#0" expanded="false" />
-                <element signature="e#6281#6683#0" expanded="false" />
-                <element signature="e#6714#7128#0" expanded="false" />
-                <element signature="e#7152#7861#0" expanded="false" />
-                <element signature="e#7234#7357#0" expanded="false" />
-                <element signature="e#7407#7643#0" expanded="false" />
-                <element signature="e#7695#7861#0" expanded="false" />
-                <element signature="e#7888#8404#0" expanded="false" />
-                <element signature="e#8436#10231#0" expanded="false" />
-                <element signature="e#11485#11655#0" expanded="false" />
-                <element signature="e#12033#12179#0" expanded="false" />
-                <element signature="e#12259#12393#0" expanded="false" />
-                <element signature="e#12651#12804#0" expanded="false" />
-                <element signature="e#13064#13205#0" expanded="false" />
-                <element signature="e#13432#13572#0" expanded="false" />
-                <element signature="e#13769#13895#0" expanded="false" />
-                <element signature="e#13992#14236#0" expanded="false" />
-                <element signature="e#14333#14495#0" expanded="false" />
-                <element signature="e#14600#14787#0" expanded="false" />
+                <element signature="e#4226#4627#0" expanded="false" />
+                <element signature="e#4657#5078#0" expanded="false" />
+                <element signature="e#5106#5511#0" expanded="false" />
+                <element signature="e#5543#5960#0" expanded="false" />
+                <element signature="e#5990#6401#0" expanded="false" />
+                <element signature="e#6428#6830#0" expanded="false" />
+                <element signature="e#6861#7275#0" expanded="false" />
+                <element signature="e#7299#8008#0" expanded="false" />
+                <element signature="e#7381#7504#0" expanded="false" />
+                <element signature="e#7554#7790#0" expanded="false" />
+                <element signature="e#7842#8008#0" expanded="false" />
+                <element signature="e#8651#10446#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,7 +62,7 @@
       <file leaf-file-name="Casey - Charactersmeme.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="1343">
               <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
@@ -313,14 +301,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24405706" sideWeight="0.12225476" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31220284" sideWeight="0.12737921" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31220284" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31220284" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977813" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -625,13 +613,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="1343">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
@@ -641,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,22 +635,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4440">
           <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/colorama/ansi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1280">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="128">
+          <caret line="92" column="6" lean-forward="false" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="327" column="82" lean-forward="false" selection-start-line="327" selection-start-column="82" selection-end-line="327" selection-end-column="82" />
+        <state relative-caret-position="83">
+          <caret line="367" column="78" lean-forward="false" selection-start-line="367" selection-start-column="78" selection-end-line="367" selection-end-column="78" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#73#670#0" expanded="false" />
@@ -675,30 +660,18 @@
             <element signature="e#2137#3141#0" expanded="false" />
             <element signature="e#3169#3332#0" expanded="false" />
             <element signature="e#3358#3759#0" expanded="false" />
-            <element signature="e#3783#4050#0" expanded="false" />
-            <element signature="e#4079#4480#0" expanded="false" />
-            <element signature="e#4510#4931#0" expanded="false" />
-            <element signature="e#4959#5364#0" expanded="false" />
-            <element signature="e#5396#5813#0" expanded="false" />
-            <element signature="e#5843#6254#0" expanded="false" />
-            <element signature="e#6281#6683#0" expanded="false" />
-            <element signature="e#6714#7128#0" expanded="false" />
-            <element signature="e#7152#7861#0" expanded="false" />
-            <element signature="e#7234#7357#0" expanded="false" />
-            <element signature="e#7407#7643#0" expanded="false" />
-            <element signature="e#7695#7861#0" expanded="false" />
-            <element signature="e#7888#8404#0" expanded="false" />
-            <element signature="e#8436#10231#0" expanded="false" />
-            <element signature="e#11485#11655#0" expanded="false" />
-            <element signature="e#12033#12179#0" expanded="false" />
-            <element signature="e#12259#12393#0" expanded="false" />
-            <element signature="e#12651#12804#0" expanded="false" />
-            <element signature="e#13064#13205#0" expanded="false" />
-            <element signature="e#13432#13572#0" expanded="false" />
-            <element signature="e#13769#13895#0" expanded="false" />
-            <element signature="e#13992#14236#0" expanded="false" />
-            <element signature="e#14333#14495#0" expanded="false" />
-            <element signature="e#14600#14787#0" expanded="false" />
+            <element signature="e#4226#4627#0" expanded="false" />
+            <element signature="e#4657#5078#0" expanded="false" />
+            <element signature="e#5106#5511#0" expanded="false" />
+            <element signature="e#5543#5960#0" expanded="false" />
+            <element signature="e#5990#6401#0" expanded="false" />
+            <element signature="e#6428#6830#0" expanded="false" />
+            <element signature="e#6861#7275#0" expanded="false" />
+            <element signature="e#7299#8008#0" expanded="false" />
+            <element signature="e#7381#7504#0" expanded="false" />
+            <element signature="e#7554#7790#0" expanded="false" />
+            <element signature="e#7842#8008#0" expanded="false" />
+            <element signature="e#8651#10446#0" expanded="false" />
           </folding>
         </state>
       </provider>

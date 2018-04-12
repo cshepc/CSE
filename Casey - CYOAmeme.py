@@ -114,8 +114,12 @@ class Key(Item):
         self.door = door
         self.next_room = next_room
 
-    def unlock(self, room,):
-        room.door = self.next_room
+    def unlock(self, room, char):
+        if self in char.items:
+            room.door = self.next_room
+            print("You unlocked the door")
+        else:
+            print("You can't do that right now.")
 
 
 class Wearable(Item):
@@ -238,9 +242,11 @@ class Room(object):
         self.items = items
         self.characters = characters
         self.first = True
+        self.locked_door = False
 
     def move(self, direction):
         global current_node
+        current_node.first = False
         current_node = globals()[getattr(self, direction)]
 
 
@@ -305,10 +311,10 @@ knife = Knife('Small Knife', 'There is a small knife in the room.', 20, 15, 90)
 # Shotgun
 shotgun = Gun("Shotgun", "There is a shotgun in the room.", 40, 80, 60, 5)
 # Armory
-kevlar_helmet = Helmet('Kevlar Helmet', 'There is a black kevlar helmet in the room.', 10, 'armor', 10)
-kevlar_chestplate = Chestplate('Kevlar Chestplate', 'There is a black kevlar chestplate in the room.', 30, 'armor', 20)
-kevlar_leggings = Leggings('Kevlar Leggings', 'There is a pair of black kevlar leggings in the room.', 20, 'armor', 15)
-steel_toed_boots = Boots('Steel Toed Boots', 'There is a  pair of black steel toed boots', 10, 'armor', 10)
+kevlar_helmet = Helmet('Kevlar Helmet', 'There is a black kevlar helmet in the room. ', 10, 'armor', 10)
+kevlar_chestplate = Chestplate('Kevlar Chestplate', 'There is a black kevlar chestplate in the room. ', 30, 'armor', 20)
+kevlar_leggings = Leggings('Kevlar Leggings', 'There is a pair of black kevlar leggings in the room. ', 20, 'armor', 15)
+steel_toed_boots = Boots('Steel Toed Boots', 'There is a pair of black steel toed boots in the room. ', 10, 'armor', 10)
 # Cafeteria
 apple = Food('Apple', 'A delicious looking apple', 5, 20)
 sandwich = Food('Sandwich', 'A turkey sandwich', 5, 40)
@@ -320,50 +326,52 @@ main_character = Character("You", 100, 90, 90, 10, 0, None, None, None, None, No
 
 # Rooms
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
-                     'hangs slightly ajar to the north.', 'hall1', None, None, None, None, None, [], [])
+                     'hangs slightly ajar to the north. ', 'hall1', None, None, None, None, None, [], [])
 hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north end there is a door. There is a door to'
-                        ' the south, and two doors to the east and west.', 'shotgun', 'cell1', 'staircase1', 'cell2',
+                        ' the south, and two doors to the east and west. ', 'shotgun', 'cell1', 'staircase1', 'cell2',
              None, None, [], [])
 cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton lying on the bed, and a light bulb is '
              'flickering above your head. There is a door behind you to the east. ', None, None, 'hall1', None, None,
              None, [knife], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
-                               'There is a door to the west.', None, None, None, 'hall1', None, None, [], [])
+                               'There is a door to the west. ', None, None, None, 'hall1', None, None, [], [])
 shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. There are doors to the north, south, east'
-                               ', and west.', 'hall2', 'hall1', 'well1', 'guardroom', None, None, [shotgun], [])
-well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west.', None, None, None,
+                               ', and west. ', 'hall2', 'hall1', 'well1', 'guardroom', None, None, [shotgun], [])
+well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west. ', None, None, None,
              'shotgun', None, None, [], [])
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
-                               'door to the east and o the west.', None, None, 'shotgun', 'key1', None, None, [], [])
-key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a door to the east.',
+                               'door to the east and o the west. ', None, None, 'shotgun', 'key1', None, None, [], [])
+key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a door to the east. ',
             None, None, 'guardroom', None, None, None, [], [])
 hall2 = Room('North/South Hallway', 'You are in a hallway with a door to the north and a door to the south. The north '
-                                    'door appears locked', 'armory', 'shotgun', None, None, None, None, [], [])
-armory = Room('Armory', 'You are in the armory. There are doors to the north, south, east and west.',
+                                    'door appears locked ', 'armory', 'shotgun', None, None, None, None, [], [])
+hall2.locked_door = True
+armory = Room('Armory', 'You are in the armory. There are doors to the north, south, east and west. ',
               'guardhouse', 'hall2', 'cafeteria', 'key2', None, None, [kevlar_helmet, kevlar_chestplate,
                                                                        kevlar_leggings, steel_toed_boots], [])
-key2 = Room('Staircase Key Room', 'You are in a very dimly lit room.  There is a door to the east.', None, None,
+key2 = Room('Staircase Key Room', 'You are in a very dimly lit room.  There is a door to the east. ', None, None,
             'armory', None, None, None, [], [])
 cafeteria = Room('Cafeteria', 'You walk in to what appears to be the former prison cafeteria. There is a door to the '
-                              'west.', None, None, None, 'armory', None, None, [lunchbag], [])
+                              'west. ', None, None, None, 'armory', None, None, [lunchbag], [])
 guardhouse = Room('Guards\' Quarters', 'You are in a room that seems to be the old guard\'s quarters. There is a bed on'
                                        ' the wall with a backpack on it. There are doors to the south, north, and '
-                                       'east.', 'gameroom', 'armory', 'tunnel', None, None, None, [pistol], [])
+                                       'east. ', 'gameroom', 'armory', 'tunnel', None, None, None, [pistol], [])
 tunnel = Room('Secret Tunnel', 'You are in a secret tunnel that starts going east, slopes down south, and then curves '
-              'back west. There is a door to the north and to the south.', 'guardhouse', 'staircase1', None, None, None,
-              None, [], [])
+              'back west. There is a door to the north and to the south. ', 'guardhouse', 'staircase1', None, None,
+              None, None, [], [])
 gameroom = Room('Game Room', 'You are in a game room. There are arcade games on the wall, and in the middle there is a '
-                'pool table with some pool balls and cues on it. There is a door to the south.', None, 'guardhouse',
+                'pool table with some pool balls and cues on it. There is a door to the south. ', None, 'guardhouse',
                 None, None, None, None, [], [])
+staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, None, [], [])
 
 # Keys
-# staircase_key = Key('Staircase Key', '', 5, staircase1.up, staircase2)
-# key2.items.append(staircase_key)
-guard_key = Key('Guard Room Key', '', 5, hall2.north, armory)
+staircase_key = Key('key', 'There is a small key in the room.', 5, staircase1.up, staircase2)
+key2.items.append(staircase_key)
+guard_key = Key('key', 'There is a small key in th room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
 
-current_node = cell2
+current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 
@@ -371,7 +379,7 @@ while True:
     desc = ''
     for item in current_node.items:
         desc += item.description
-    print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL + '\n')
+    print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
     if current_node.first:
         print(current_node.description + desc)
 
@@ -390,8 +398,7 @@ while True:
     elif command == 'jump':
         print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
     elif command == 'l':
-        for item in current_node.items:
-            print(item.name)
+        print(current_node.description + desc)
     elif command == 'i':
         for item in main_character.items:
             print(item.name)
@@ -404,6 +411,21 @@ while True:
                 print("You picked up the %s" % item.name)
         if not added:
             print("I don't see it there")
+    elif 'unlock' in command:
+        if current_node == hall2:
+            if guard_key in main_character.items:
+                guard_key.unlock(hall2, main_character)
+                hall2.description = 'You are in a hallway with a door to the north and a door to the south. The north '
+                'door is hanging open. '
+            else:
+                print("You can't do that right now.")
+        elif current_node == staircase1:
+            if staircase_key in main_character.items:
+                staircase_key.unlock(staircase1, main_character)
+                staircase1.description = 'You are in a room with a staircase leading up to a door. The door is hanging '
+                'open. There is a door to the west. '
+            else:
+                print("You don't seem to have the key.")
 
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
