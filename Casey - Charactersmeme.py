@@ -77,7 +77,7 @@ class Character(object):
         if self.health <= 0:
             print('%s died.' % self.name)
             self.alive = False
-
+\
 
 item = Item('item', 10, 10, 10, 0)
 item2 = Item('flashlight', 10, 10, 10, 0)

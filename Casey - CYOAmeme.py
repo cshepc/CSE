@@ -242,7 +242,6 @@ class Room(object):
         self.items = items
         self.characters = characters
         self.first = True
-        self.locked_door = False
 
     def move(self, direction):
         global current_node
@@ -365,11 +364,11 @@ gameroom = Room('Game Room', 'You are in a game room. There are arcade games on 
 staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, None, [], [])
 
 # Keys
-staircase_key = Key('key', 'There is a small key in the room.', 5, staircase1.up, staircase2)
-key2.items.append(staircase_key)
+staircase_key = Key('key', 'There is a small key in the room.', 5, staircase1.up, 'staircase2')
+cell1.items.append(staircase_key)
+stair = 'You are in a room with a staircase leading up to a door. There is a door to the west. '
 guard_key = Key('key', 'There is a small key in th room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
-
 
 current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
@@ -422,8 +421,7 @@ while True:
         elif current_node == staircase1:
             if staircase_key in main_character.items:
                 staircase_key.unlock(staircase1, main_character)
-                staircase1.description = 'You are in a room with a staircase leading up to a door. The door is hanging '
-                'open. There is a door to the west. '
+                staircase1.description = stair
             else:
                 print("You don't seem to have the key.")
 
