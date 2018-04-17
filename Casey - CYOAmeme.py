@@ -3,8 +3,9 @@ import random
 
 
 class Item(object):
-    def __init__(self, name, description, inventory_space):
+    def __init__(self, name, short_name, description, inventory_space):
         self.name = name
+        self.short_name  = short_name
         self.description = description
         self.inventory_space = inventory_space
 
@@ -22,8 +23,8 @@ class Item(object):
 
 
 class Consumable(Item):
-    def __init__(self, name, description, inventory_space):
-        super(Consumable, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space):
+        super(Consumable, self).__init__(name, short_name, description, inventory_space)
 
     def get_consumed(self, consumer):
         print("%s consumed the %s" % consumer, self.name)
@@ -31,8 +32,8 @@ class Consumable(Item):
 
 
 class Food(Consumable):
-    def __init__(self, name, description, inventory_space, hunger_restoration):
-        super(Food, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, hunger_restoration):
+        super(Food, self).__init__(name, short_name, description, inventory_space)
         self.hunger_restore = hunger_restoration
 
     def get_consumed(self, consumer):
@@ -42,8 +43,8 @@ class Food(Consumable):
 
 
 class HealthPack(Consumable):
-    def __init__(self, name, description, inventory_space, health_boost):
-        super(HealthPack, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, health_boost):
+        super(HealthPack, self).__init__(name, short_name, description, inventory_space)
         self.health_boost = health_boost
 
     def get_consumed(self, consumer):
@@ -53,8 +54,8 @@ class HealthPack(Consumable):
 
 
 class Ammo(Consumable):
-    def __init__(self, name, description, inventory_space, ammo):
-        super(Ammo, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, ammo):
+        super(Ammo, self).__init__(name, short_name, description, inventory_space)
         self.ammo = ammo
 
     def reload(self, gun, char):
@@ -63,8 +64,8 @@ class Ammo(Consumable):
 
 
 class Weapon(Item):
-    def __init__(self, name, description, inventory_space, damage, accuracy):
-        super(Weapon, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, damage, accuracy):
+        super(Weapon, self).__init__(name, short_name, description, inventory_space)
         self.damage = damage
         self.accuracy = accuracy
 
@@ -91,13 +92,13 @@ class Weapon(Item):
 
 
 class Knife(Weapon):
-    def __init__(self, name, description, inventory_space, damage, accuracy):
-        super(Knife, self).__init__(name, description, inventory_space, damage, accuracy)
+    def __init__(self, name, short_name, description, inventory_space, damage, accuracy):
+        super(Knife, self).__init__(name, short_name, description, inventory_space, damage, accuracy)
 
 
 class Gun(Weapon):
-    def __init__(self, name, description, inventory_space, damage, accuracy, ammunition):
-        super(Gun, self).__init__(name, description, inventory_space, damage, accuracy)
+    def __init__(self, name, short_name, description, inventory_space, damage, accuracy, ammunition):
+        super(Gun, self).__init__(name, short_name, description, inventory_space, damage, accuracy)
         self.ammo = ammunition
 
     def attack(self, attacker, target):
@@ -109,22 +110,16 @@ class Gun(Weapon):
 
 
 class Key(Item):
-    def __init__(self, name, description, inventory_space, door, next_room):
-        super(Key, self).__init__(name, description, inventory_space)
-        self.door = door
+    def __init__(self, name, short_name, description, inventory_space, current_room, direction, next_room):
+        super(Key, self).__init__(name, short_name, description, inventory_space)
+        self.current_room = current_room
+        self.direction = direction
         self.next_room = next_room
-
-    def unlock(self, room, char):
-        if self in char.items:
-            room.door = self.next_room
-            print("You unlocked the door")
-        else:
-            print("You can't do that right now.")
 
 
 class Wearable(Item):
-    def __init__(self, name, description, inventory_space, clothing_type):
-        super(Wearable, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type):
+        super(Wearable, self).__init__(name, short_name, description, inventory_space)
         self.clothing_type = clothing_type
 
     def get_equipped(self, player):
@@ -135,8 +130,8 @@ class Wearable(Item):
 
 
 class Armor(Wearable):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Armor, self).__init__(name, description, inventory_space, clothing_type)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Armor, self).__init__(name, short_name, description, inventory_space, clothing_type)
         self.armor = armor_boost
 
     def get_equipped(self, player):
@@ -148,8 +143,8 @@ class Armor(Wearable):
 
 
 class Helmet(Armor):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Helmet, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Helmet, self).__init__(name, short_name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.helmet_equipped:
@@ -160,8 +155,8 @@ class Helmet(Armor):
 
 
 class Chestplate(Armor):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Chestplate, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Chestplate, self).__init__(name, short_name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.chestplate_equipped:
@@ -172,8 +167,8 @@ class Chestplate(Armor):
 
 
 class Leggings(Armor):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Leggings, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Leggings, self).__init__(name, short_name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.leggings_equipped:
@@ -184,8 +179,8 @@ class Leggings(Armor):
 
 
 class Boots(Armor):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Boots, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Boots, self).__init__(name, short_name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.boots_equipped:
@@ -196,8 +191,8 @@ class Boots(Armor):
 
 
 class Gauntlets(Armor):
-    def __init__(self, name, description, inventory_space, clothing_type, armor_boost):
-        super(Gauntlets, self).__init__(name, description, inventory_space, clothing_type, armor_boost)
+    def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
+        super(Gauntlets, self).__init__(name, short_name, description, inventory_space, clothing_type, armor_boost)
 
     def get_equipped(self, player):
         if not player.gauntlets_equipped:
@@ -208,8 +203,8 @@ class Gauntlets(Armor):
 
 
 class Bag(Item):
-    def __init__(self, name, description, inventory_space, items, bag_space):
-        super(Bag, self).__init__(name, description, inventory_space)
+    def __init__(self, name, short_name, description, inventory_space, items, bag_space):
+        super(Bag, self).__init__(name, short_name, description, inventory_space)
         self.items = items
         self.bag_space = bag_space
 
@@ -306,20 +301,23 @@ class Character(object):
 # Items
 
 # Cell2
-knife = Knife('Small Knife', 'There is a small knife in the room.', 20, 15, 90)
+knife = Knife('Small Knife', 'knife', 'There is a small knife in the room.', 20, 15, 90)
 # Shotgun
-shotgun = Gun("Shotgun", "There is a shotgun in the room.", 40, 80, 60, 5)
+shotgun = Gun("Shotgun", 'shotgun', "There is a shotgun in the room.", 40, 80, 60, 5)
 # Armory
-kevlar_helmet = Helmet('Kevlar Helmet', 'There is a black kevlar helmet in the room. ', 10, 'armor', 10)
-kevlar_chestplate = Chestplate('Kevlar Chestplate', 'There is a black kevlar chestplate in the room. ', 30, 'armor', 20)
-kevlar_leggings = Leggings('Kevlar Leggings', 'There is a pair of black kevlar leggings in the room. ', 20, 'armor', 15)
-steel_toed_boots = Boots('Steel Toed Boots', 'There is a pair of black steel toed boots in the room. ', 10, 'armor', 10)
+kevlar_helmet = Helmet('Kevlar Helmet', 'helmet', 'There is a black kevlar helmet in the room. ', 10, 'armor', 10)
+kevlar_chestplate = Chestplate('Kevlar Chestplate', 'chestplate', 'There is a black kevlar chestplate in the room. ',
+                               30, 'armor', 20)
+kevlar_leggings = Leggings('Kevlar Leggings', 'leggings', 'There is a pair of black kevlar leggings in the room. ', 20,
+                           'armor', 15)
+steel_toed_boots = Boots('Steel Toed Boots', 'boots', 'There is a pair of black steel toed boots in the room. ', 10,
+                         'armor', 10)
 # Cafeteria
-apple = Food('Apple', 'A delicious looking apple', 5, 20)
-sandwich = Food('Sandwich', 'A turkey sandwich', 5, 40)
-lunchbag = Bag("Lunchbag", 'a paper bag', 20, [apple, sandwich], 10)
+apple = Food('Apple', 'apple', 'A delicious looking apple', 5, 20)
+sandwich = Food('Sandwich','sandwich', 'A turkey sandwich', 5, 40)
+lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper bag', 20, [apple, sandwich], 10)
 # Guard House
-pistol = Gun("Pistol", "A small black pistol", 20, 20, 70, 5)
+pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
 main_character = Character("You", 100, 90, 90, 10, 0, None, None, None, None, None)
 
@@ -334,6 +332,7 @@ cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton l
              None, [knife], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
                                'There is a door to the west. ', None, None, None, 'hall1', None, None, [], [])
+staircase1.locked_door = 'up'
 shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. There are doors to the north, south, east'
                                ', and west. ', 'hall2', 'hall1', 'well1', 'guardroom', None, None, [shotgun], [])
 well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west. ', None, None, None,
@@ -343,8 +342,8 @@ guardroom = Room('Guard Room', 'You are in a room with several computer monitors
 key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a door to the east. ',
             None, None, 'guardroom', None, None, None, [], [])
 hall2 = Room('North/South Hallway', 'You are in a hallway with a door to the north and a door to the south. The north '
-                                    'door appears locked ', 'armory', 'shotgun', None, None, None, None, [], [])
-hall2.locked_door = True
+                                    'door appears locked ', None, 'shotgun', None, None, None, None, [], [])
+hall2.locked_door = 'north'
 armory = Room('Armory', 'You are in the armory. There are doors to the north, south, east and west. ',
               'guardhouse', 'hall2', 'cafeteria', 'key2', None, None, [kevlar_helmet, kevlar_chestplate,
                                                                        kevlar_leggings, steel_toed_boots], [])
@@ -364,15 +363,16 @@ gameroom = Room('Game Room', 'You are in a game room. There are arcade games on 
 staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, None, [], [])
 
 # Keys
-staircase_key = Key('key', 'There is a small key in the room.', 5, staircase1.up, 'staircase2')
+staircase_key = Key('Staircase Key', 'key', 'There is a small key in the room.', 5, staircase1, 'up', 'staircase2')
 cell1.items.append(staircase_key)
 stair = 'You are in a room with a staircase leading up to a door. There is a door to the west. '
-guard_key = Key('key', 'There is a small key in th room.', 5, hall2.north, armory)
+guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, [hall2], [hall2.north], [armory])
 key1.items.append(guard_key)
 
 current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
+
 
 while True:
     desc = ''
@@ -404,7 +404,7 @@ while True:
     elif 'pick up' in command:
         added = False
         for item in current_node.items:
-            if command[8:] == item.name.lower():
+            if command[8:] == item.short_name.lower():
                 main_character.pick_up(item, current_node)
                 added = True
                 print("You picked up the %s" % item.name)
@@ -413,17 +413,15 @@ while True:
     elif 'unlock' in command:
         if current_node == hall2:
             if guard_key in main_character.items:
-                guard_key.unlock(hall2, main_character)
-                hall2.description = 'You are in a hallway with a door to the north and a door to the south. The north '
-                'door is hanging open. '
+                hall2.north = armory
+                print("You unlocked the door")
             else:
-                print("You can't do that right now.")
+                print("You do not have a key")
         elif current_node == staircase1:
             if staircase_key in main_character.items:
-                staircase_key.unlock(staircase1, main_character)
-                staircase1.description = stair
+                staircase1.up = staircase2
+                print("You unlocked the door.")
             else:
-                print("You don't seem to have the key.")
-
+                print("You do not have the key.")
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
