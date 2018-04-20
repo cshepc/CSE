@@ -20,31 +20,29 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="375" column="0" lean-forward="true" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+            <state relative-caret-position="379">
+              <caret line="420" column="42" lean-forward="true" selection-start-line="420" selection-start-column="42" selection-end-line="420" selection-end-column="42" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#73#720#0" expanded="false" />
-                <element signature="e#751#1040#0" expanded="false" />
-                <element signature="e#1071#1470#0" expanded="false" />
-                <element signature="e#1507#1948#0" expanded="false" />
-                <element signature="e#1979#2256#0" expanded="false" />
-                <element signature="e#2283#3311#0" expanded="false" />
-                <element signature="e#3339#3526#0" expanded="false" />
-                <element signature="e#3552#3977#0" expanded="false" />
-                <element signature="e#4001#4297#0" expanded="false" />
-                <element signature="e#4326#4751#0" expanded="false" />
-                <element signature="e#4781#5226#0" expanded="false" />
-                <element signature="e#5254#5683#0" expanded="false" />
-                <element signature="e#5715#6156#0" expanded="false" />
-                <element signature="e#6186#6621#0" expanded="false" />
-                <element signature="e#6648#7074#0" expanded="false" />
-                <element signature="e#7105#7543#0" expanded="false" />
-                <element signature="e#7567#8300#0" expanded="false" />
-                <element signature="e#7846#8082#0" expanded="false" />
-                <element signature="e#8134#8300#0" expanded="false" />
-                <element signature="e#8327#8878#0" expanded="false" />
-                <element signature="e#8910#10705#0" expanded="false" />
+                <element signature="e#73#719#0" expanded="false" />
+                <element signature="e#750#1039#0" expanded="false" />
+                <element signature="e#1070#1469#0" expanded="false" />
+                <element signature="e#1506#1947#0" expanded="false" />
+                <element signature="e#1978#2255#0" expanded="false" />
+                <element signature="e#2282#3310#0" expanded="false" />
+                <element signature="e#3338#3525#0" expanded="false" />
+                <element signature="e#3551#3976#0" expanded="false" />
+                <element signature="e#4000#4242#0" expanded="false" />
+                <element signature="e#4271#4696#0" expanded="false" />
+                <element signature="e#4726#5171#0" expanded="false" />
+                <element signature="e#5199#5628#0" expanded="false" />
+                <element signature="e#5660#6101#0" expanded="false" />
+                <element signature="e#6131#6566#0" expanded="false" />
+                <element signature="e#6593#7019#0" expanded="false" />
+                <element signature="e#7050#7488#0" expanded="false" />
+                <element signature="e#7512#8245#0" expanded="false" />
+                <element signature="e#8272#8823#0" expanded="false" />
+                <element signature="e#8855#10650#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -298,6 +296,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -324,7 +323,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="145" />
+      <option name="time" value="146" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -647,31 +646,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="375" column="0" lean-forward="true" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+        <state relative-caret-position="379">
+          <caret line="420" column="42" lean-forward="true" selection-start-line="420" selection-start-column="42" selection-end-line="420" selection-end-column="42" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#73#720#0" expanded="false" />
-            <element signature="e#751#1040#0" expanded="false" />
-            <element signature="e#1071#1470#0" expanded="false" />
-            <element signature="e#1507#1948#0" expanded="false" />
-            <element signature="e#1979#2256#0" expanded="false" />
-            <element signature="e#2283#3311#0" expanded="false" />
-            <element signature="e#3339#3526#0" expanded="false" />
-            <element signature="e#3552#3977#0" expanded="false" />
-            <element signature="e#4001#4297#0" expanded="false" />
-            <element signature="e#4326#4751#0" expanded="false" />
-            <element signature="e#4781#5226#0" expanded="false" />
-            <element signature="e#5254#5683#0" expanded="false" />
-            <element signature="e#5715#6156#0" expanded="false" />
-            <element signature="e#6186#6621#0" expanded="false" />
-            <element signature="e#6648#7074#0" expanded="false" />
-            <element signature="e#7105#7543#0" expanded="false" />
-            <element signature="e#7567#8300#0" expanded="false" />
-            <element signature="e#7846#8082#0" expanded="false" />
-            <element signature="e#8134#8300#0" expanded="false" />
-            <element signature="e#8327#8878#0" expanded="false" />
-            <element signature="e#8910#10705#0" expanded="false" />
+            <element signature="e#73#719#0" expanded="false" />
+            <element signature="e#750#1039#0" expanded="false" />
+            <element signature="e#1070#1469#0" expanded="false" />
+            <element signature="e#1506#1947#0" expanded="false" />
+            <element signature="e#1978#2255#0" expanded="false" />
+            <element signature="e#2282#3310#0" expanded="false" />
+            <element signature="e#3338#3525#0" expanded="false" />
+            <element signature="e#3551#3976#0" expanded="false" />
+            <element signature="e#4000#4242#0" expanded="false" />
+            <element signature="e#4271#4696#0" expanded="false" />
+            <element signature="e#4726#5171#0" expanded="false" />
+            <element signature="e#5199#5628#0" expanded="false" />
+            <element signature="e#5660#6101#0" expanded="false" />
+            <element signature="e#6131#6566#0" expanded="false" />
+            <element signature="e#6593#7019#0" expanded="false" />
+            <element signature="e#7050#7488#0" expanded="false" />
+            <element signature="e#7512#8245#0" expanded="false" />
+            <element signature="e#8272#8823#0" expanded="false" />
+            <element signature="e#8855#10650#0" expanded="false" />
           </folding>
         </state>
       </provider>

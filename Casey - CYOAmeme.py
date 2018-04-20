@@ -5,7 +5,7 @@ import random
 class Item(object):
     def __init__(self, name, short_name, description, inventory_space):
         self.name = name
-        self.short_name  = short_name
+        self.short_name = short_name
         self.description = description
         self.inventory_space = inventory_space
 
@@ -110,9 +110,8 @@ class Gun(Weapon):
 
 
 class Key(Item):
-    def __init__(self, name, short_name, description, inventory_space, current_room, direction, next_room):
+    def __init__(self, name, short_name, description, inventory_space,  direction, next_room):
         super(Key, self).__init__(name, short_name, description, inventory_space)
-        self.current_room = current_room
         self.direction = direction
         self.next_room = next_room
 
@@ -314,7 +313,7 @@ steel_toed_boots = Boots('Steel Toed Boots', 'boots', 'There is a pair of black 
                          'armor', 10)
 # Cafeteria
 apple = Food('Apple', 'apple', 'A delicious looking apple', 5, 20)
-sandwich = Food('Sandwich','sandwich', 'A turkey sandwich', 5, 40)
+sandwich = Food('Sandwich', 'sandwich', 'A turkey sandwich', 5, 40)
 lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper bag', 20, [apple, sandwich], 10)
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
@@ -363,10 +362,10 @@ gameroom = Room('Game Room', 'You are in a game room. There are arcade games on 
 staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, None, [], [])
 
 # Keys
-staircase_key = Key('Staircase Key', 'key', 'There is a small key in the room.', 5, staircase1, 'up', 'staircase2')
+staircase_key = Key('Staircase Key', 'key', 'There is a small key in the room.', 5, staircase1.up, 'staircase2')
 cell1.items.append(staircase_key)
 stair = 'You are in a room with a staircase leading up to a door. There is a door to the west. '
-guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, [hall2], [hall2.north], [armory])
+guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
 current_node = cell1
