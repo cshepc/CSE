@@ -147,8 +147,11 @@ class Helmet(Armor):
 
     def get_equipped(self, player):
         if not player.helmet_equipped:
+            player.items.remove(self)
+            player.helmet = self
             player.helmet_equipped = True
             player.armor += self.armor
+            print("You put on the %s." % self.name)
         else:
             print("You can't do that right now.")
 
@@ -314,7 +317,7 @@ steel_toed_boots = Boots('Steel Toed Boots', 'boots', 'There is a pair of black 
 # Cafeteria
 apple = Food('Apple', 'apple', 'A delicious looking apple', 5, 20)
 sandwich = Food('Sandwich', 'sandwich', 'A turkey sandwich', 5, 40)
-lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper bag', 20, [apple, sandwich], 10)
+lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich], 10)
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
@@ -359,7 +362,8 @@ tunnel = Room('Secret Tunnel', 'You are in a secret tunnel that starts going eas
 gameroom = Room('Game Room', 'You are in a game room. There are arcade games on the wall, and in the middle there is a '
                 'pool table with some pool balls and cues on it. There is a door to the south. ', None, 'guardhouse',
                 None, None, None, None, [], [])
-staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, None, [], [])
+staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, 'staircase1',
+                  [], [])
 
 # Keys
 staircase_key = Key('Staircase Key', 'key', 'There is a small key in the room.', 5, staircase1.up, 'staircase2')
@@ -376,7 +380,7 @@ short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 while True:
     desc = ''
     for item in current_node.items:
-        desc += item.description
+        desc += ('\n' + item.description)
     print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
     if current_node.first:
         print(current_node.description + desc)
@@ -412,15 +416,42 @@ while True:
     elif 'unlock' in command:
         if current_node == hall2:
             if guard_key in main_character.items:
-                hall2.north = armory
+                hall2.north = 'armory'
                 print("You unlocked the door")
             else:
                 print("You do not have a key")
         elif current_node == staircase1:
             if staircase_key in main_character.items:
-                staircase1.up = staircase2
+                staircase1.up = 'staircase2'
                 print("You unlocked the door.")
             else:
                 print("You do not have the key.")
+    elif 'put on' in command:
+        if 'helmet' in command:
+            for stuff in main_character.items:
+                if stuff is Helmet:
+                    stuff.get_equipped(main_character)
+
+        elif 'chestplate' in command:
+            for stuff in main_character.items:
+                if stuff is Chestplate:
+                    stuff.get_equipped(main_character)
+                    break
+        elif 'leggings' in command:
+            for stuff in main_character.items:
+                if stuff is Leggings:
+                    stuff.get_equipped(main_character)
+                    break
+        elif 'boots' in command:
+            for stuff in main_character.items:
+                if stuff is Boots:
+                    stuff.get_equipped(main_character)
+                    break
+        elif 'gauntlets' in command:
+            for stuff in main_character.items:
+                if stuff is Gauntlets:
+                    stuff.get_equipped(main_character)
+                    break
+
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
