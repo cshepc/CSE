@@ -155,6 +155,16 @@ class Helmet(Armor):
         else:
             print("You can't do that right now.")
 
+    def get_unequipped(self, player):
+        if player.helmet_equipped:
+            player.items.append(self)
+            player.helmet = None
+            player.helmet_equipped = False
+            player.armor -= self.armor
+            print("You took off the %s." % self.name)
+        else:
+            print("You can't do that right now.")
+
 
 class Chestplate(Armor):
     def __init__(self, name, short_name, description, inventory_space, clothing_type, armor_boost):
@@ -162,8 +172,21 @@ class Chestplate(Armor):
 
     def get_equipped(self, player):
         if not player.chestplate_equipped:
-            player.chestplate_equipped = True
+            player.items.remove(self)
+            player.helmet = self
+            player.helmet_equipped = True
             player.armor += self.armor
+            print("You put on the %s." % self.name)
+        else:
+            print("You can't do that right now.")
+
+    def get_unequipped(self, player):
+        if player.chestplate_equipped:
+            player.items.append(self)
+            player.chestplate = None
+            player.chestplate_equipped = False
+            player.armor -= self.armor
+            print("You took off the %s." % self.name)
         else:
             print("You can't do that right now.")
 
@@ -174,8 +197,21 @@ class Leggings(Armor):
 
     def get_equipped(self, player):
         if not player.leggings_equipped:
+            player.items.remove(self)
+            player.leggings = self
             player.leggings_equipped = True
             player.armor += self.armor
+            print("You put on the %s." % self.name)
+        else:
+            print("You can't do that right now.")
+
+    def get_unequipped(self, player):
+        if player.leggings_equipped:
+            player.items.append(self)
+            player.leggings = None
+            player.leggings_equipped = False
+            player.armor -= self.armor
+            print("You took off the %s." % self.name)
         else:
             print("You can't do that right now.")
 

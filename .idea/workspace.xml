@@ -20,8 +20,8 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="453" column="25" lean-forward="true" selection-start-line="453" selection-start-column="25" selection-end-line="453" selection-end-column="25" />
+            <state relative-caret-position="252">
+              <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#73#719#0" expanded="false" />
@@ -35,12 +35,10 @@
                 <element signature="e#4000#4242#0" expanded="false" />
                 <element signature="e#4271#4696#0" expanded="false" />
                 <element signature="e#4726#5171#0" expanded="false" />
-                <element signature="e#5783#6224#0" expanded="false" />
-                <element signature="e#6254#6689#0" expanded="false" />
-                <element signature="e#6716#7142#0" expanded="false" />
-                <element signature="e#7173#7611#0" expanded="false" />
-                <element signature="e#7635#8368#0" expanded="false" />
-                <element signature="e#8395#8946#0" expanded="false" />
+                <element signature="e#8013#8439#0" expanded="false" />
+                <element signature="e#8470#8908#0" expanded="false" />
+                <element signature="e#8932#9665#0" expanded="false" />
+                <element signature="e#9692#10243#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -295,13 +293,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31220284" sideWeight="0.12737921" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31220284" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31220284" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29648608" sideWeight="0.53090334" order="2" side_tool="true" content_ui="tabs" />
@@ -632,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="92" column="6" lean-forward="false" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,14 +638,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="453" column="25" lean-forward="true" selection-start-line="453" selection-start-column="25" selection-end-line="453" selection-end-column="25" />
+        <state relative-caret-position="252">
+          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#73#719#0" expanded="false" />
@@ -661,12 +658,10 @@
             <element signature="e#4000#4242#0" expanded="false" />
             <element signature="e#4271#4696#0" expanded="false" />
             <element signature="e#4726#5171#0" expanded="false" />
-            <element signature="e#5783#6224#0" expanded="false" />
-            <element signature="e#6254#6689#0" expanded="false" />
-            <element signature="e#6716#7142#0" expanded="false" />
-            <element signature="e#7173#7611#0" expanded="false" />
-            <element signature="e#7635#8368#0" expanded="false" />
-            <element signature="e#8395#8946#0" expanded="false" />
+            <element signature="e#8013#8439#0" expanded="false" />
+            <element signature="e#8470#8908#0" expanded="false" />
+            <element signature="e#8932#9665#0" expanded="false" />
+            <element signature="e#9692#10243#0" expanded="false" />
           </folding>
         </state>
       </provider>
