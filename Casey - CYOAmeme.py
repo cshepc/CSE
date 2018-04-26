@@ -306,6 +306,7 @@ class Character(object):
         self.leggings_equipped = False
         self.boots_equipped = False
         self.gauntlets_equipped = False
+        self.description = None
 
     def pick_up(self, thing, room):
         if thing in self.items:
@@ -336,6 +337,12 @@ class Character(object):
             self.alive = False
 
 
+class MainCharacter(Character):
+    def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
+                 gauntlets):
+        super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
+                                            leggings, boots, gauntlets)
+
 # Items
 
 # Cell2
@@ -357,7 +364,9 @@ lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich]
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
-main_character = Character("You", 100, 90, 90, 10, 0, None, None, None, None, None)
+main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None)
+guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None)
+guard1.description = "There is a person in the room blocking the door."
 
 # Rooms
 cell1 = Room("Cell", 'You are in a dimly lit prison cell. There is a single bed and a toilet in the corner. A door '
@@ -376,7 +385,8 @@ shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. Th
 well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west. ', None, None, None,
              'shotgun', None, None, [], [])
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
-                               'door to the east and o the west. ', None, None, 'shotgun', 'key1', None, None, [], [])
+                               'door to the east and to the west. ', None, None, 'shotgun', 'key1', None, None, [],
+                               [guard1])
 key1 = Room('Key Room', 'You are in a room with a small table in the center. There is a door to the east. ',
             None, None, 'guardroom', None, None, None, [], [])
 hall2 = Room('North/South Hallway', 'You are in a hallway with a door to the north and a door to the south. The north '
@@ -408,7 +418,7 @@ stair = 'You are in a room with a staircase leading up to a door. There is a doo
 guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
-current_node = cell1
+current_node = armory
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 
@@ -431,6 +441,10 @@ while True:
     if command in directions:
         try:
             current_node.move(command)
+            for char in current_node.characters:
+                if isinstance(char, Character) and not isinstance(char, MainCharacter):
+                    print(char.description)
+                    pass
         except KeyError:
             print("You cannot go this way")
     elif command == 'jump':
@@ -465,29 +479,37 @@ while True:
     elif 'put on' in command:
         if 'helmet' in command:
             for stuff in main_character.items:
-                if stuff is Helmet:
+                if type(stuff) is Helmet:
                     stuff.get_equipped(main_character)
-
         elif 'chestplate' in command:
             for stuff in main_character.items:
-                if stuff is Chestplate:
+                if type(stuff) is Chestplate:
                     stuff.get_equipped(main_character)
-                    break
         elif 'leggings' in command:
             for stuff in main_character.items:
-                if stuff is Leggings:
+                if type(stuff) is Leggings:
                     stuff.get_equipped(main_character)
-                    break
         elif 'boots' in command:
             for stuff in main_character.items:
-                if stuff is Boots:
+                if type(stuff) is Boots:
                     stuff.get_equipped(main_character)
-                    break
         elif 'gauntlets' in command:
             for stuff in main_character.items:
-                if stuff is Gauntlets:
+                if type(stuff) is Gauntlets:
                     stuff.get_equipped(main_character)
-                    break
-
+    elif 'take off' in command:
+        if 'helmet' in command:
+            main_character.helmet.get_unequipped(main_character)
+        elif 'chestplate' in command:
+            main_character.chestplate.get_unequipped(main_character)
+        elif 'leggings' in command:
+            main_character.leggings.get_unequipped(main_character)
+        elif 'boots' in command:
+            main_character.boots.get_unequipped(main_character)
+        elif 'gauntlets' in command:
+            main_character.gauntlets.get_unequipped(main_character)
+    elif command == "oh, worm?":
+        print(Fore.YELLOW + 'You Win!' + Style.RESET_ALL)
+        exit(0)
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
