@@ -20,45 +20,31 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-284">
-              <caret line="368" column="71" lean-forward="true" selection-start-line="368" selection-start-column="71" selection-end-line="368" selection-end-column="71" />
+            <state relative-caret-position="364">
+              <caret line="510" column="32" lean-forward="true" selection-start-line="510" selection-start-column="32" selection-end-line="510" selection-end-column="32" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#73#719#0" expanded="false" />
                 <element signature="e#750#1039#0" expanded="false" />
                 <element signature="e#1070#1469#0" expanded="false" />
                 <element signature="e#1506#1947#0" expanded="false" />
-                <element signature="e#1978#2255#0" expanded="false" />
-                <element signature="e#2282#3310#0" expanded="false" />
-                <element signature="e#3338#3525#0" expanded="false" />
-                <element signature="e#3551#3976#0" expanded="false" />
-                <element signature="e#4000#4242#0" expanded="false" />
-                <element signature="e#4271#4696#0" expanded="false" />
-                <element signature="e#4726#5171#0" expanded="false" />
-                <element signature="e#8470#8908#0" expanded="false" />
-                <element signature="e#8932#9665#0" expanded="false" />
-                <element signature="e#9692#10243#0" expanded="false" />
+                <element signature="e#1978#2263#0" expanded="false" />
+                <element signature="e#2290#3318#0" expanded="false" />
+                <element signature="e#3346#3533#0" expanded="false" />
+                <element signature="e#3559#3984#0" expanded="false" />
+                <element signature="e#4008#4250#0" expanded="false" />
+                <element signature="e#4279#4704#0" expanded="false" />
+                <element signature="e#4734#5179#0" expanded="false" />
+                <element signature="e#5207#6104#0" expanded="false" />
+                <element signature="e#6136#7053#0" expanded="false" />
+                <element signature="e#7083#7994#0" expanded="false" />
+                <element signature="e#8021#8447#0" expanded="false" />
+                <element signature="e#8478#8916#0" expanded="false" />
+                <element signature="e#8940#9673#0" expanded="false" />
+                <element signature="e#9700#10251#0" expanded="false" />
+                <element signature="e#10283#12107#0" expanded="false" />
+                <element signature="e#12146#12483#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Casey - WorldMapOOPmeme.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Casey - WorldMapOOPmeme.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2278">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Casey - Charactersmeme.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Casey - Charactersmeme.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -319,7 +305,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="146" />
+      <option name="time" value="147" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -642,24 +628,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="368" column="71" lean-forward="true" selection-start-line="368" selection-start-column="71" selection-end-line="368" selection-end-column="71" />
+        <state relative-caret-position="364">
+          <caret line="510" column="32" lean-forward="true" selection-start-line="510" selection-start-column="32" selection-end-line="510" selection-end-column="32" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#73#719#0" expanded="false" />
             <element signature="e#750#1039#0" expanded="false" />
             <element signature="e#1070#1469#0" expanded="false" />
             <element signature="e#1506#1947#0" expanded="false" />
-            <element signature="e#1978#2255#0" expanded="false" />
-            <element signature="e#2282#3310#0" expanded="false" />
-            <element signature="e#3338#3525#0" expanded="false" />
-            <element signature="e#3551#3976#0" expanded="false" />
-            <element signature="e#4000#4242#0" expanded="false" />
-            <element signature="e#4271#4696#0" expanded="false" />
-            <element signature="e#4726#5171#0" expanded="false" />
-            <element signature="e#8470#8908#0" expanded="false" />
-            <element signature="e#8932#9665#0" expanded="false" />
-            <element signature="e#9692#10243#0" expanded="false" />
+            <element signature="e#1978#2263#0" expanded="false" />
+            <element signature="e#2290#3318#0" expanded="false" />
+            <element signature="e#3346#3533#0" expanded="false" />
+            <element signature="e#3559#3984#0" expanded="false" />
+            <element signature="e#4008#4250#0" expanded="false" />
+            <element signature="e#4279#4704#0" expanded="false" />
+            <element signature="e#4734#5179#0" expanded="false" />
+            <element signature="e#5207#6104#0" expanded="false" />
+            <element signature="e#6136#7053#0" expanded="false" />
+            <element signature="e#7083#7994#0" expanded="false" />
+            <element signature="e#8021#8447#0" expanded="false" />
+            <element signature="e#8478#8916#0" expanded="false" />
+            <element signature="e#8940#9673#0" expanded="false" />
+            <element signature="e#9700#10251#0" expanded="false" />
+            <element signature="e#10283#12107#0" expanded="false" />
+            <element signature="e#12146#12483#0" expanded="false" />
           </folding>
         </state>
       </provider>

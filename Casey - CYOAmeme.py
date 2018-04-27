@@ -58,9 +58,9 @@ class Ammo(Consumable):
         super(Ammo, self).__init__(name, short_name, description, inventory_space)
         self.ammo = ammo
 
-    def reload(self, gun, char):
+    def reload(self, gun, consumer):
         gun.ammo += self.ammo
-        char.items.remove(self)
+        consumer.items.remove(self)
 
 
 class Weapon(Item):
@@ -343,6 +343,7 @@ class MainCharacter(Character):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
                                             leggings, boots, gauntlets)
 
+
 # Items
 
 # Cell2
@@ -430,7 +431,10 @@ while True:
     print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
     if current_node.first:
         print(current_node.description + desc)
-
+    for char in current_node.characters:
+        if isinstance(char, Character) and not isinstance(char, MainCharacter):
+            print(char.description)
+            pass
     command = input(">_").lower().strip()
     long_command = list(command)
     if command == 'quit':
@@ -441,10 +445,6 @@ while True:
     if command in directions:
         try:
             current_node.move(command)
-            for char in current_node.characters:
-                if isinstance(char, Character) and not isinstance(char, MainCharacter):
-                    print(char.description)
-                    pass
         except KeyError:
             print("You cannot go this way")
     elif command == 'jump':
