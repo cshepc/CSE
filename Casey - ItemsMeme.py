@@ -63,8 +63,9 @@ class Weapon(Item):
         else:
             print("You don't have room")
 
-    def get_put_down(self, consumer):
+    def get_put_down(self, consumer, room):
         consumer.items.remove(self)
+        room.items.append(self)
         consumer.inventory_space += self.inventory_space
         consumer.damage -= self.damage
         consumer.accuracy = consumer.accuracy * 2

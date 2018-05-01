@@ -17,8 +17,9 @@ class Item(object):
         else:
             print("You don't have room")
 
-    def get_put_down(self, consumer):
+    def get_put_down(self, consumer, room):
         consumer.items.remove(self)
+        room.items.append(self)
         consumer.inventory_space += self.inventory_space
 
 
@@ -80,10 +81,11 @@ class Weapon(Item):
         else:
             print("You don't have room")
 
-    def get_put_down(self, consumer):
+    def get_put_down(self, consumer, room):
         consumer.items.remove(self)
+        room.items.append(self)
         consumer.inventory_space += self.inventory_space
-        consumer.damage -= self.damage
+        consumer.base_damage -= self.damage
         consumer.accuracy = consumer.accuracy * 2
         consumer.accuracy -= self.accuracy
 
@@ -284,7 +286,7 @@ class Room(object):
 
 class Character(object):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets):
+                 gauntlets, hostile):
         self.name = name
         self.health = health
         self.items = []
@@ -307,6 +309,8 @@ class Character(object):
         self.boots_equipped = False
         self.gauntlets_equipped = False
         self.description = None
+        self.attacking = False
+        self.hostile = hostile
 
     def pick_up(self, thing, room):
         if thing in self.items:
@@ -316,8 +320,8 @@ class Character(object):
         else:
             item.get_picked_up(self, room)
 
-    def put_down(self, thing, room):
-        thing.get_put_down(self, room)
+    def put_down(self, thing):
+        thing.get_put_down(self, current_node)
 
     def attack(self, target):
         chance_of_succeeding = self.accuracy + target.evasiveness
@@ -328,20 +332,26 @@ class Character(object):
         else:
             print("%s missed." % self)
 
-    def take_damage(self, attacker, room):
+    def take_damage(self, attacker):
         damage_taken = attacker.base_damage - self.armor * 0.8
         self.health -= damage_taken
         if self.health <= 0:
-            print('%s died.' % self.name)
-            room.items.append(self.items)
-            self.alive = False
+            self.die()
+
+    def die(self):
+        print("%s has died" % self.name)
+        current_node.characters.remove(self)
+        for thingy in self.items:
+            current_node.items.append(thingy)
+        self.alive = False
 
 
 class MainCharacter(Character):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets):
+                 gauntlets, hostile=False):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
-                                            leggings, boots, gauntlets)
+                                            leggings, boots, gauntlets, hostile)
+        self.under_attack = False
 
 
 # Items
@@ -366,7 +376,7 @@ lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich]
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
 main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None)
-guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None)
+guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None, True)
 guard1.description = "There is a person in the room blocking the door."
 
 # Rooms
@@ -409,94 +419,131 @@ tunnel = Room('Secret Tunnel', 'You are in a secret tunnel that starts going eas
 gameroom = Room('Game Room', 'You are in a game room. There are arcade games on the wall, and in the middle there is a '
                 'pool table with some pool balls and cues on it. There is a door to the south. ', None, 'guardhouse',
                 None, None, None, None, [], [])
-staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', None, None, None, None, None, 'staircase1',
-                  [], [])
+staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', 'win_room', None, None, None, None,
+                  'staircase1', [], [])
+win_room = Room("You Win!", "Congrats! You won the game!", None, None, None, None, None, None, [], [])
 
 # Keys
 staircase_key = Key('Staircase Key', 'key', 'There is a small key in the room.', 5, staircase1.up, 'staircase2')
-cell1.items.append(staircase_key)
+key2.items.append(staircase_key)
 stair = 'You are in a room with a staircase leading up to a door. There is a door to the west. '
 guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
-current_node = armory
+current_node = staircase2
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
-
+attacking_char = None
 
 while True:
     desc = ''
     for item in current_node.items:
         desc += ('\n' + item.description)
     print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
+
     if current_node.first:
         print(current_node.description + desc)
+        if current_node == win_room:
+            exit(0)
+
     for char in current_node.characters:
         if isinstance(char, Character) and not isinstance(char, MainCharacter):
             print(char.description)
+            if char.hostile:
+                print("They rush at you.")
+                char.attacking = True
+                main_character.under_attack = True
+                attacking_char = char
             pass
     command = input(">_").lower().strip()
     long_command = list(command)
+
     if command == 'quit':
         print("Thanks for Playing!")
-        quit(0)
+        quit()
+
+    elif current_node == win_room:
+        exit(0)
+
     elif command in short_directions:
         command = directions[short_directions.index(command)]
+
     if command in directions:
         try:
             current_node.move(command)
         except KeyError:
             print("You cannot go this way")
+
     elif command == 'jump':
         print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
+
     elif command == 'l':
-        print(current_node.description + desc)
+        print(current_node.items)
+        current_node.first = True
+
     elif command == 'i':
         for item in main_character.items:
             print(item.name)
+
     elif 'pick up' in command:
         added = False
         for item in current_node.items:
-            if command[8:] == item.short_name.lower():
+            if command[8:] == item.short_name.lower() or item.name.lower():
                 main_character.pick_up(item, current_node)
                 added = True
                 print("You picked up the %s" % item.name)
         if not added:
             print("I don't see it there")
+
+    elif 'put down' in command:
+        for item in main_character.items:
+            if command[8:] == item.short_name.lower() or item.name.lower():
+                main_character.put_down(item)
+                print("You put down the %s" % item.name)
+
     elif 'unlock' in command:
+
         if current_node == hall2:
             if guard_key in main_character.items:
                 hall2.north = 'armory'
                 print("You unlocked the door")
             else:
                 print("You do not have a key")
+
         elif current_node == staircase1:
             if staircase_key in main_character.items:
                 staircase1.up = 'staircase2'
                 print("You unlocked the door.")
             else:
                 print("You do not have the key.")
+
     elif 'put on' in command:
+
         if 'helmet' in command:
             for stuff in main_character.items:
                 if type(stuff) is Helmet:
                     stuff.get_equipped(main_character)
+
         elif 'chestplate' in command:
             for stuff in main_character.items:
                 if type(stuff) is Chestplate:
                     stuff.get_equipped(main_character)
+
         elif 'leggings' in command:
             for stuff in main_character.items:
                 if type(stuff) is Leggings:
                     stuff.get_equipped(main_character)
+
         elif 'boots' in command:
             for stuff in main_character.items:
                 if type(stuff) is Boots:
                     stuff.get_equipped(main_character)
+
         elif 'gauntlets' in command:
             for stuff in main_character.items:
                 if type(stuff) is Gauntlets:
                     stuff.get_equipped(main_character)
+
     elif 'take off' in command:
         if 'helmet' in command:
             main_character.helmet.get_unequipped(main_character)
@@ -508,8 +555,21 @@ while True:
             main_character.boots.get_unequipped(main_character)
         elif 'gauntlets' in command:
             main_character.gauntlets.get_unequipped(main_character)
+
     elif command == "oh, worm?":
         print(Fore.YELLOW + 'You Win!' + Style.RESET_ALL)
         exit(0)
+
+    elif 'attack' in command:
+        if main_character.under_attack:
+            main_character.attack(attacking_char)
+        else:
+            print("There's nothing to fight.")
+
     else:
         print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
+
+    if main_character.under_attack:
+        for char in current_node.characters:
+            if char.attacking:
+                char.attack(main_character)
