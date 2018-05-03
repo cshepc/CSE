@@ -286,7 +286,7 @@ class Room(object):
 
 class Character(object):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets, hostile):
+                 gauntlets, hostile, hunger):
         self.name = name
         self.health = health
         self.items = []
@@ -311,6 +311,7 @@ class Character(object):
         self.description = None
         self.attacking = False
         self.hostile = hostile
+        self.hunger = hunger
 
     def pick_up(self, thing, room):
         if thing in self.items:
@@ -345,12 +346,15 @@ class Character(object):
             current_node.items.append(thingy)
         self.alive = False
 
+    def eat(self, food):
+        food.get_consumed()
+
 
 class MainCharacter(Character):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets, hostile=False):
+                 gauntlets, hunger, hostile=False):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
-                                            leggings, boots, gauntlets, hostile)
+                                            leggings, boots, gauntlets, hostile, hunger)
         self.under_attack = False
 
 
@@ -358,6 +362,7 @@ class MainCharacter(Character):
 
 # Cell2
 knife = Knife('Small Knife', 'knife', 'There is a small knife in the room.', 20, 15, 90)
+ham_sandwich = Food("Ham Sandwich", 'ham sandwich', 'There is a ham sandwich in the room.', 10, 30)
 # Shotgun
 shotgun = Gun("Shotgun", 'shotgun', "There is a shotgun in the room.", 40, 80, 60, 5)
 # Armory
@@ -375,8 +380,8 @@ lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich]
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
-main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None)
-guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None, True)
+main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None, 100)
+guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None, True, None)
 guard1.description = "There is a person in the room blocking the door."
 
 # Rooms
@@ -387,7 +392,7 @@ hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north 
              None, None, [], [])
 cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton lying on the bed, and a light bulb is '
              'flickering above your head. There is a door behind you to the east. ', None, None, 'hall1', None, None,
-             None, [knife], [])
+             None, [knife, ham_sandwich], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
                                'There is a door to the west. ', None, None, None, 'hall1', None, None, [], [])
 staircase1.locked_door = 'up'
@@ -430,7 +435,7 @@ stair = 'You are in a room with a staircase leading up to a door. There is a doo
 guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
-current_node = staircase2
+current_node = cell2
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
@@ -477,6 +482,10 @@ while True:
     elif command == 'jump':
         print(Fore.GREEN + Style.BRIGHT + 'Whee!' + Style.RESET_ALL)
 
+    elif 'eat' in command:
+        for stuff in main_character.items:
+            if isinstance(stuff, Food):
+                main_character.eat(stuff)
     elif command == 'l':
         print(current_node.items)
         current_node.first = True
@@ -485,6 +494,8 @@ while True:
         for item in main_character.items:
             print(item.name)
 
+    elif command == 'h':
+        print("You have %i hunger left." % main_character.hunger)
     elif 'pick up' in command:
         added = False
         for item in current_node.items:
@@ -573,3 +584,5 @@ while True:
         for char in current_node.characters:
             if char.attacking:
                 char.attack(main_character)
+
+    main_character.hunger -= 10

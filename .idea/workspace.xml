@@ -20,8 +20,8 @@
       <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1434">
-              <caret line="570" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="570" selection-end-column="0" />
+            <state relative-caret-position="164">
+              <caret line="496" column="23" lean-forward="false" selection-start-line="496" selection-start-column="23" selection-end-line="496" selection-end-column="23" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -72,9 +72,9 @@
         <option value="$PROJECT_DIR$/Inheritance Notes Meme.py" />
         <option value="$PROJECT_DIR$/programmermeme.py" />
         <option value="$PROJECT_DIR$/Casey - WorldMapOOPmeme.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - Charactersmeme.py" />
         <option value="$PROJECT_DIR$/Casey - ItemsMeme.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
       </list>
     </option>
@@ -101,8 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,6 +112,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,7 +259,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.46909666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -291,13 +290,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lucky7's.py" />
     <entry file="file://$PROJECT_DIR$/Warmups.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -602,14 +587,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/colorama/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#75#134#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1434">
-          <caret line="570" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="570" selection-end-column="0" />
+        <state relative-caret-position="164">
+          <caret line="496" column="23" lean-forward="false" selection-start-line="496" selection-start-column="23" selection-end-line="496" selection-end-column="23" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
