@@ -319,7 +319,7 @@ class Character(object):
         elif self.inventory_space < thing.inventory_space:
             print("Your inventory is full.")
         else:
-            item.get_picked_up(self, room)
+            thing.get_picked_up(self, room)
 
     def put_down(self, thing):
         thing.get_put_down(self, current_node)
@@ -340,8 +340,8 @@ class Character(object):
             self.die()
 
     def die(self):
+        global current_node
         print("%s has died" % self.name)
-        current_node.characters.remove(self)
         for thingy in self.items:
             current_node.items.append(thingy)
         self.alive = False
@@ -356,6 +356,22 @@ class MainCharacter(Character):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
                                             leggings, boots, gauntlets, hostile, hunger)
         self.under_attack = False
+
+    def die(self):
+        global current_node
+        print("%s has died" % self.name)
+        for thingy in self.items:
+            current_node.items.append(thingy)
+        self.alive = False
+        respawn = input("Do you want to respawn? >_")
+        if respawn == 'yes' or 'y':
+            current_node = cell1
+        else:
+            reset = input("Would you like to restart? >_")
+            if reset == 'yes' or 'y':
+                pass
+            else:
+                exit(0)
 
 
 # Items
@@ -577,12 +593,12 @@ while True:
         else:
             print("There's nothing to fight.")
 
-    else:
-        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
-
     if main_character.under_attack:
         for char in current_node.characters:
             if char.attacking:
                 char.attack(main_character)
+
+    else:
+        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
 
     main_character.hunger -= 10
