@@ -38,7 +38,7 @@ class Food(Consumable):
         self.hunger_restore = hunger_restoration
 
     def get_consumed(self, consumer):
-        print("%s ate the %s" % consumer.name, self.name)
+        print("%s ate the %s" % (consumer.name, self.name))
         consumer.hunger += self.hunger_restore
         consumer.items.remove(self)
 
@@ -336,6 +336,7 @@ class Character(object):
     def take_damage(self, attacker):
         damage_taken = attacker.base_damage - self.armor * 0.8
         self.health -= damage_taken
+        print("%s hit %s for %i damage." % (attacker.name, self.name, damage_taken))
         if self.health <= 0:
             self.die()
 
@@ -347,7 +348,7 @@ class Character(object):
         self.alive = False
 
     def eat(self, food):
-        food.get_consumed()
+        food.get_consumed(self)
 
 
 class MainCharacter(Character):
@@ -512,10 +513,14 @@ while True:
 
     elif command == 'h':
         print("You have %i hunger left." % main_character.hunger)
+
+    elif command == 'health':
+        print("You have %i health left." % main_character.health)
+
     elif 'pick up' in command:
         added = False
         for item in current_node.items:
-            if command[8:] == item.short_name.lower() or item.name.lower():
+            if command[8:] == item.short_name:
                 main_character.pick_up(item, current_node)
                 added = True
                 print("You picked up the %s" % item.name)
@@ -593,12 +598,12 @@ while True:
         else:
             print("There's nothing to fight.")
 
+    else:
+        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
+
     if main_character.under_attack:
         for char in current_node.characters:
             if char.attacking:
                 char.attack(main_character)
-
-    else:
-        print(Fore.RED + "Command not recognized" + Style.RESET_ALL)
 
     main_character.hunger -= 10
