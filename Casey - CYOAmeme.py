@@ -75,9 +75,7 @@ class Weapon(Item):
             room.items.remove(self)
             consumer.items.append(self)
             consumer.inventory_space -= self.inventory_space
-            consumer.base_damage += self.damage
-            consumer.accuracy += self.accuracy
-            consumer.accuracy = consumer.accuracy / 2
+
         else:
             print("You don't have room")
 
@@ -85,9 +83,18 @@ class Weapon(Item):
         consumer.items.remove(self)
         room.items.append(self)
         consumer.inventory_space += self.inventory_space
-        consumer.base_damage -= self.damage
-        consumer.accuracy = consumer.accuracy * 2
-        consumer.accuracy -= self.accuracy
+
+    def get_equipped(self, character):
+        character.base_damage += self.damage
+        character.accuracy += self.accuracy
+        character.accuracy = character.accuracy / 2
+
+    def get_unequipped(self, character):
+        character.items.append(character.weapon)
+        character.base_damage -= self.damage
+        character.accuracy = character.accuracy * 2
+        character.accuracy -= self.accuracy
+        character.weapon = None
 
     def attack(self, attacker, target):
         target.take_damage(attacker, self)
@@ -286,7 +293,7 @@ class Room(object):
 
 class Character(object):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets, hostile, hunger):
+                 gauntlets, hostile, hunger, weapon):
         self.name = name
         self.health = health
         self.items = []
@@ -312,6 +319,7 @@ class Character(object):
         self.attacking = False
         self.hostile = hostile
         self.hunger = hunger
+        self.weapon = weapon
 
     def pick_up(self, thing, room):
         if thing in self.items:
@@ -331,7 +339,7 @@ class Character(object):
         if chance_of_succeeding >= succeed_num:
             target.take_damage(self)
         else:
-            print("%s missed." % self)
+            print("%s missed." % self.name)
 
     def take_damage(self, attacker):
         damage_taken = attacker.base_damage - self.armor * 0.8
@@ -343,6 +351,7 @@ class Character(object):
     def die(self):
         global current_node
         print("%s has died" % self.name)
+        current_node.characters.remove(self)
         for thingy in self.items:
             current_node.items.append(thingy)
         self.alive = False
@@ -353,9 +362,9 @@ class Character(object):
 
 class MainCharacter(Character):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
-                 gauntlets, hunger, hostile=False):
+                 gauntlets, hunger, weapon, hostile=False):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
-                                            leggings, boots, gauntlets, hostile, hunger)
+                                            leggings, boots, gauntlets, hostile, hunger, weapon)
         self.under_attack = False
 
     def die(self):
@@ -397,8 +406,8 @@ lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich]
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
-main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None, 100)
-guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None, True, None)
+main_character = MainCharacter("You", 100, 90, 90, 10, 0, None, None, None, None, None, 100, None, False)
+guard1 = Character("Insane Guard", 100, 90, 60, 20, 0, None, None, None, None, None, True, None, None)
 guard1.description = "There is a person in the room blocking the door."
 
 # Rooms
@@ -452,7 +461,7 @@ stair = 'You are in a room with a staircase leading up to a door. There is a doo
 guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
-current_node = cell2
+current_node = shotgun
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
@@ -524,6 +533,30 @@ while True:
                 main_character.pick_up(item, current_node)
                 added = True
                 print("You picked up the %s" % item.name)
+                if isinstance(item, Weapon):
+                    if main_character.weapon is None:
+                        equip_weapon = input("You are not carrying a weapon. would you like to equip this weapon?")
+                        if equip_weapon == 'yes':
+                            main_character.weapon = item
+                            main_character.items.remove(item)
+                            main_character.base_damage += item.damage
+                            main_character.accuracy += item.accuracy
+                            main_character.accuracy = main_character.accuracy / 2
+                            print("You equipped the %s." % item.name)
+                        else:
+                            pass
+                    else:
+                        equip_weapon = input("You are carrying a weapon. Would you like to equip this weapon instead?")
+                        if equip_weapon == 'yes':
+
+                            main_character.weapon = item
+                            main_character.items.remove(item)
+                            main_character.base_damage += item.damage
+                            main_character.accuracy += item.accuracy
+                            main_character.accuracy = main_character.accuracy / 2
+                            print("You equipped the %s." % item.name)
+                        else:
+                            pass
         if not added:
             print("I don't see it there")
 
@@ -548,7 +581,10 @@ while True:
                 print("You unlocked the door.")
             else:
                 print("You do not have the key.")
-
+    elif 'equip' in command:
+        for item in main_character.items:
+            if item.short_name == command[5:]:
+                pass
     elif 'put on' in command:
 
         if 'helmet' in command:
