@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 from colorama import Fore, Style
 import random
+import os
 
 
 class Item(object):
@@ -88,6 +91,8 @@ class Weapon(Item):
         character.base_damage += self.damage
         character.accuracy += self.accuracy
         character.accuracy = character.accuracy / 2
+        character.weapon = self
+        character.items.remove(self)
 
     def get_unequipped(self, character):
         character.items.append(character.weapon)
@@ -359,6 +364,12 @@ class Character(object):
     def eat(self, food):
         food.get_consumed(self)
 
+    def equip(self, thingy):
+        thingy.get_equipped(self)
+
+    def unequip(self, thingy):
+        thingy.get_unequipped(self)
+
 
 class MainCharacter(Character):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
@@ -379,7 +390,8 @@ class MainCharacter(Character):
         else:
             reset = input("Would you like to restart? >_")
             if reset == 'yes' or 'y':
-                pass
+                os.execv('C:\Users\j2eh\PycharmProjects\CSE\Casey - CYOAmeme.py/a.py', [''])
+
             else:
                 exit(0)
 
@@ -537,24 +549,16 @@ while True:
                     if main_character.weapon is None:
                         equip_weapon = input("You are not carrying a weapon. would you like to equip this weapon?")
                         if equip_weapon == 'yes':
-                            main_character.weapon = item
-                            main_character.items.remove(item)
-                            main_character.base_damage += item.damage
-                            main_character.accuracy += item.accuracy
-                            main_character.accuracy = main_character.accuracy / 2
+                            main_character.equip(item)
                             print("You equipped the %s." % item.name)
                         else:
                             pass
                     else:
                         equip_weapon = input("You are carrying a weapon. Would you like to equip this weapon instead?")
                         if equip_weapon == 'yes':
-
-                            main_character.weapon = item
-                            main_character.items.remove(item)
-                            main_character.base_damage += item.damage
-                            main_character.accuracy += item.accuracy
-                            main_character.accuracy = main_character.accuracy / 2
-                            print("You equipped the %s." % item.name)
+                            main_character.unequip(main_character.weapon)
+                            main_character.equip(item)
+                            print("You equipped the %s" % item.name)
                         else:
                             pass
         if not added:
@@ -581,10 +585,22 @@ while True:
                 print("You unlocked the door.")
             else:
                 print("You do not have the key.")
+
     elif 'equip' in command:
         for item in main_character.items:
-            if item.short_name == command[5:]:
-                pass
+            if isinstance(item, Weapon):
+                if item.short_name == command[6:]:
+                    if main_character.weapon is None:
+                        main_character.equip(item)
+                        print("You equipped the %s" % item.name)
+                    else:
+                        equip_weapon = input("You already have a weapon equipped. \n Would you like to replace the %s"
+                                             " with the %s? >_" % (main_character.weapon.name, item.name))
+                        if equip_weapon == 'yes':
+                            print("You replaced the %s with the %s" % (main_character.weapon.name, item.name))
+                            main_character.unequip(main_character.weapon)
+                            main_character.equip(item)
+
     elif 'put on' in command:
 
         if 'helmet' in command:
