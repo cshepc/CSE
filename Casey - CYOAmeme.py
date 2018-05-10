@@ -1,8 +1,5 @@
-#!/usr/bin/python
-
 from colorama import Fore, Style
 import random
-import os
 
 
 class Item(object):
@@ -390,7 +387,7 @@ class MainCharacter(Character):
         else:
             reset = input("Would you like to restart? >_")
             if reset == 'yes' or 'y':
-                os.execv('C:\Users\j2eh\PycharmProjects\CSE\Casey - CYOAmeme.py/a.py', [''])
+                    pass
 
             else:
                 exit(0)
@@ -477,6 +474,7 @@ current_node = shotgun
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
+guard1.items.append(kevlar_leggings)
 
 while True:
     desc = ''
