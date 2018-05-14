@@ -23,6 +23,20 @@ class Item(object):
         consumer.inventory_space += self.inventory_space
 
 
+class Bottle(Item):
+    def __init__(self, name, short_name, description, inventory_space, fill_space):
+        super(Bottle, self).__init__(name, short_name, description, inventory_space)
+        self.fill_space = fill_space
+
+    def get_drunk(self, character):
+        if self.fill_space > 0:
+            self.fill_space -= 1
+            print("You took a drink")
+            character.thirst = 100
+        else:
+            print("Your %s is empty" % self.name)
+
+
 class Consumable(Item):
     def __init__(self, name, short_name, description, inventory_space):
         super(Consumable, self).__init__(name, short_name, description, inventory_space)
@@ -374,6 +388,7 @@ class MainCharacter(Character):
         super(MainCharacter, self).__init__(name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate,
                                             leggings, boots, gauntlets, hostile, hunger, weapon)
         self.under_attack = False
+        self.thirst = 100
 
     def die(self):
         global current_node
