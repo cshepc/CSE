@@ -300,6 +300,7 @@ class Room(object):
         self.items = items
         self.characters = characters
         self.first = True
+        self.fillable = False
 
     def move(self, direction):
         global current_node
@@ -381,6 +382,9 @@ class Character(object):
     def unequip(self, thingy):
         thingy.get_unequipped(self)
 
+    def drink(self, bottle):
+        bottle.get_drunk(self)
+
 
 class MainCharacter(Character):
     def __init__(self, name, health, evasiveness, accuracy, base_damage, armor, helmet, chestplate, leggings, boots,
@@ -397,15 +401,13 @@ class MainCharacter(Character):
             current_node.items.append(thingy)
         self.alive = False
         respawn = input("Do you want to respawn? >_")
-        if respawn == 'yes' or 'y':
+        if respawn == 'yes':
             current_node = cell1
-        else:
-            reset = input("Would you like to restart? >_")
-            if reset == 'yes' or 'y':
-                    pass
+            main_character.thirst = 100
+            main_character.hunger = 100
 
-            else:
-                exit(0)
+        else:
+            exit(0)
 
 
 # Items
@@ -413,6 +415,7 @@ class MainCharacter(Character):
 # Cell2
 knife = Knife('Small Knife', 'knife', 'There is a small knife in the room.', 20, 15, 90)
 ham_sandwich = Food("Ham Sandwich", 'ham sandwich', 'There is a ham sandwich in the room.', 10, 30)
+water_bottle = Bottle("Water bottle", 'water bottle', 'There is a water bottle in the room.', 5, 3)
 # Shotgun
 shotgun = Gun("Shotgun", 'shotgun', "There is a shotgun in the room.", 40, 80, 60, 5)
 # Armory
@@ -424,9 +427,8 @@ kevlar_leggings = Leggings('Kevlar Leggings', 'leggings', 'There is a pair of bl
 steel_toed_boots = Boots('Steel Toed Boots', 'boots', 'There is a pair of black steel toed boots in the room. ', 10,
                          'armor', 10)
 # Cafeteria
-apple = Food('Apple', 'apple', 'A delicious looking apple', 5, 20)
-sandwich = Food('Sandwich', 'sandwich', 'A turkey sandwich', 5, 40)
-lunchbag = Bag("Lunchbag", 'lunchbag', 'a paper lunchbag', 20, [apple, sandwich], 10)
+apple = Food('Apple', 'apple', 'A delicious looking apple is in the room.', 5, 20)
+sandwich = Food('Sandwich', 'sandwich', 'A turkey sandwich is in the room.', 5, 40)
 # Guard House
 pistol = Gun("Pistol", 'pistol', "A small black pistol", 20, 20, 70, 5)
 
@@ -442,7 +444,7 @@ hall1 = Room('Hallway', 'You walk in to a relatively long hallway. At the north 
              None, None, [], [])
 cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton lying on the bed, and a light bulb is '
              'flickering above your head. There is a door behind you to the east. ', None, None, 'hall1', None, None,
-             None, [knife, ham_sandwich], [])
+             None, [knife, ham_sandwich, water_bottle], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
                                'There is a door to the west. ', None, None, None, 'hall1', None, None, [], [])
 staircase1.locked_door = 'up'
@@ -450,6 +452,7 @@ shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. Th
                                ', and west. ', 'hall2', 'hall1', 'well1', 'guardroom', None, None, [shotgun], [])
 well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west. ', None, None, None,
              'shotgun', None, None, [], [])
+well1.fillable = True
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
                                'door to the east and to the west. ', None, None, 'shotgun', 'key1', None, None, [],
                                [guard1])
@@ -464,7 +467,7 @@ armory = Room('Armory', 'You are in the armory. There are doors to the north, so
 key2 = Room('Staircase Key Room', 'You are in a very dimly lit room.  There is a door to the east. ', None, None,
             'armory', None, None, None, [], [])
 cafeteria = Room('Cafeteria', 'You walk in to what appears to be the former prison cafeteria. There is a door to the '
-                              'west. ', None, None, None, 'armory', None, None, [lunchbag], [])
+                              'west. ', None, None, None, 'armory', None, None, [apple, sandwich], [])
 guardhouse = Room('Guards\' Quarters', 'You are in a room that seems to be the old guard\'s quarters. There is a bed on'
                                        ' the wall with a backpack on it. There are doors to the south, north, and '
                                        'east. ', 'gameroom', 'armory', 'tunnel', None, None, None, [pistol], [])
@@ -485,7 +488,7 @@ stair = 'You are in a room with a staircase leading up to a door. There is a doo
 guard_key = Key('Armory Key', 'key', 'There is a small key in the room.', 5, hall2.north, armory)
 key1.items.append(guard_key)
 
-current_node = shotgun
+current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
@@ -510,7 +513,7 @@ while True:
                 char.attacking = True
                 main_character.under_attack = True
                 attacking_char = char
-            pass
+
     command = input(">_").lower().strip()
     long_command = list(command)
 
@@ -527,6 +530,12 @@ while True:
     if command in directions:
         try:
             current_node.move(command)
+            main_character.hunger -= 10
+            main_character.thirst -= 5
+            if main_character.hunger < 1:
+                main_character.die()
+            if main_character.thirst < 1:
+                main_character.die()
         except KeyError:
             print("You cannot go this way")
 
@@ -564,16 +573,13 @@ while True:
                         if equip_weapon == 'yes':
                             main_character.equip(item)
                             print("You equipped the %s." % item.name)
-                        else:
-                            pass
+
                     else:
                         equip_weapon = input("You are carrying a weapon. Would you like to equip this weapon instead?")
                         if equip_weapon == 'yes':
                             main_character.unequip(main_character.weapon)
                             main_character.equip(item)
                             print("You equipped the %s" % item.name)
-                        else:
-                            pass
         if not added:
             print("I don't see it there")
 
@@ -653,6 +659,20 @@ while True:
         elif 'gauntlets' in command:
             main_character.gauntlets.get_unequipped(main_character)
 
+    elif 'drink' in command:
+        for item in main_character.items:
+            if isinstance(item, Bottle):
+                main_character.drink(item)
+
+    elif 'fill' in command:
+        if water_bottle in main_character.items:
+            if current_node == well1:
+                water_bottle.fill_space = 5
+            else:
+                print("You can't do that here.")
+        else:
+            print("You have nothing to fill.")
+
     elif command == "oh, worm?":
         print(Fore.YELLOW + 'You Win!' + Style.RESET_ALL)
         exit(0)
@@ -671,4 +691,5 @@ while True:
             if char.attacking:
                 char.attack(main_character)
 
-    main_character.hunger -= 10
+    print("\nYour hunger is %i" % main_character.hunger)
+    print("Your thirst is %i" % main_character.thirst)
