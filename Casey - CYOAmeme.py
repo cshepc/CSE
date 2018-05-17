@@ -247,8 +247,11 @@ class Boots(Armor):
 
     def get_equipped(self, player):
         if not player.boots_equipped:
+            player.items.remove(self)
+            player.boots = self
             player.boots_equipped = True
             player.armor += self.armor
+            print("You put on the %s." % self.name)
         else:
             print("You can't do that right now.")
 
@@ -339,10 +342,12 @@ class Character(object):
         self.weapon = weapon
 
     def pick_up(self, thing, room):
+        global inventory_full
         if thing in self.items:
             print("You are already carrying the item")
         elif self.inventory_space < thing.inventory_space:
             print("Your inventory is full.")
+            inventory_full = True
         else:
             thing.get_picked_up(self, room)
 
@@ -410,6 +415,33 @@ class MainCharacter(Character):
             exit(0)
 
 
+def equip(thingy, slot):
+    if main_character.__getattribute__(slot) is None:
+
+        if slot == 'weapon':
+            equip_weapon = input("You are not carrying a weapon. would you like to equip the %s?" % thingy.name)
+            if equip_weapon == 'yes':
+                main_character.equip(thingy)
+
+        else:
+            equip_weapon = input("You are not wearing a %s. would you like to put on this %s?" % (slot, slot))
+            if equip_weapon == 'yes':
+                main_character.equip(thingy)
+
+    else:
+        if slot == 'weapon':
+            equip_weapon = input("You are already carrying a weapon. would you like to equip the %s?" % thingy.name)
+            if equip_weapon == 'yes':
+                main_character.unequip(main_character.weapon)
+                main_character.equip(thingy)
+
+        else:
+            equip_weapon = input("You are already wearing a %s. would you like to put on this %s?" % (slot, slot))
+            if equip_weapon == 'yes':
+                main_character.unequip(main_character.__getattribute__(slot))
+                main_character.equip(thingy)
+
+
 # Items
 
 # Cell2
@@ -446,12 +478,12 @@ cell2 = Room('Formerly Occupied Cell', 'You are in a cell. There is a skeleton l
              'flickering above your head. There is a door behind you to the east. ', None, None, 'hall1', None, None,
              None, [knife, ham_sandwich, water_bottle], [])
 staircase1 = Room('Staircase', 'You are in a room with a staircase leading up to a door. The door appears locked. '
-                               'There is a door to the west. ', None, None, None, 'hall1', None, None, [], [])
+                               'There is a door to the west. ', None, None, None, 'hall1', None, None, [apple], [])
 staircase1.locked_door = 'up'
 shotgun = Room('Shotgun Room', 'You are in a room with a table in the center. There are doors to the north, south, east'
                                ', and west. ', 'hall2', 'hall1', 'well1', 'guardroom', None, None, [shotgun], [])
 well1 = Room('Bottom of Well', 'You are at the bottom of a well. There is a door to the west. ', None, None, None,
-             'shotgun', None, None, [], [])
+             'shotgun', None, None, [apple], [])
 well1.fillable = True
 guardroom = Room('Guard Room', 'You are in a room with several computer monitors and bright harsh lights. There is a '
                                'door to the east and to the west. ', None, None, 'shotgun', 'key1', None, None, [],
@@ -463,7 +495,7 @@ hall2 = Room('North/South Hallway', 'You are in a hallway with a door to the nor
 hall2.locked_door = 'north'
 armory = Room('Armory', 'You are in the armory. There are doors to the north, south, east and west. ',
               'guardhouse', 'hall2', 'cafeteria', 'key2', None, None, [kevlar_helmet, kevlar_chestplate,
-                                                                       kevlar_leggings, steel_toed_boots], [])
+                                                                       kevlar_leggings, steel_toed_boots, apple], [])
 key2 = Room('Staircase Key Room', 'You are in a very dimly lit room.  There is a door to the east. ', None, None,
             'armory', None, None, None, [], [])
 cafeteria = Room('Cafeteria', 'You walk in to what appears to be the former prison cafeteria. There is a door to the '
@@ -478,7 +510,7 @@ gameroom = Room('Game Room', 'You are in a game room. There are arcade games on 
                 'pool table with some pool balls and cues on it. There is a door to the south. ', None, 'guardhouse',
                 None, None, None, None, [], [])
 staircase2 = Room('Staircase Floor 2', 'You are on a staircase landing. ', 'win_room', None, None, None, None,
-                  'staircase1', [], [])
+                  'staircase1', [apple], [])
 win_room = Room("You Win!", "Congrats! You won the game!", None, None, None, None, None, None, [], [])
 
 # Keys
@@ -492,16 +524,19 @@ current_node = cell1
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
-guard1.items.append(kevlar_leggings)
+inventory_full = False
 
 while True:
     desc = ''
     for item in current_node.items:
         desc += ('\n' + item.description)
-    print('\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
+    print('============================================================================================================'
+          + '=====================================' + '\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
 
     if current_node.first:
-        print(current_node.description + desc)
+        print( current_node.description + desc + '\n' + '=============================================================='
+                                                        '=============================================================='
+                                                        '=====================')
         if current_node == win_room:
             exit(0)
 
@@ -553,6 +588,7 @@ while True:
     elif command == 'i':
         for item in main_character.items:
             print(item.name)
+        print("You have %i inventory space left" % main_character.inventory_space)
 
     elif command == 'h':
         print("You have %i hunger left." % main_character.hunger)
@@ -566,20 +602,20 @@ while True:
             if command[8:] == item.short_name:
                 main_character.pick_up(item, current_node)
                 added = True
+                if inventory_full:
+                    break
+
                 print("You picked up the %s" % item.name)
                 if isinstance(item, Weapon):
-                    if main_character.weapon is None:
-                        equip_weapon = input("You are not carrying a weapon. would you like to equip this weapon?")
-                        if equip_weapon == 'yes':
-                            main_character.equip(item)
-                            print("You equipped the %s." % item.name)
-
-                    else:
-                        equip_weapon = input("You are carrying a weapon. Would you like to equip this weapon instead?")
-                        if equip_weapon == 'yes':
-                            main_character.unequip(main_character.weapon)
-                            main_character.equip(item)
-                            print("You equipped the %s" % item.name)
+                    equip(item, 'weapon')
+                if isinstance(item, Helmet):
+                    equip(item, 'helmet')
+                if isinstance(item, Chestplate):
+                    equip(item, 'chestplate')
+                if isinstance(item, Leggings):
+                    equip(item, 'leggings')
+                if isinstance(item, Boots):
+                    equip(item, 'boots')
         if not added:
             print("I don't see it there")
 
@@ -595,6 +631,7 @@ while True:
             if guard_key in main_character.items:
                 hall2.north = 'armory'
                 print("You unlocked the door")
+                hall2.description = 'You are in a hallway with a door to the north and a door to the south.'
             else:
                 print("You do not have a key")
 
@@ -602,6 +639,7 @@ while True:
             if staircase_key in main_character.items:
                 staircase1.up = 'staircase2'
                 print("You unlocked the door.")
+                staircase1.description = stair
             else:
                 print("You do not have the key.")
 
@@ -613,9 +651,9 @@ while True:
                         main_character.equip(item)
                         print("You equipped the %s" % item.name)
                     else:
-                        equip_weapon = input("You already have a weapon equipped. \n Would you like to replace the %s"
-                                             " with the %s? >_" % (main_character.weapon.name, item.name))
-                        if equip_weapon == 'yes':
+                        equip_item = input("You already have a weapon equipped. \n Would you like to replace the %s"
+                                           " with the %s? >_" % (main_character.weapon.name, item.name))
+                        if equip_item == 'yes':
                             print("You replaced the %s with the %s" % (main_character.weapon.name, item.name))
                             main_character.unequip(main_character.weapon)
                             main_character.equip(item)
@@ -691,5 +729,5 @@ while True:
             if char.attacking:
                 char.attack(main_character)
 
-    print("\nYour hunger is %i" % main_character.hunger)
-    print("Your thirst is %i" % main_character.thirst)
+
+    print('\n')
