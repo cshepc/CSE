@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfacdae-1e76-4316-9f04-2f69c70b4c56" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Casey - CYOAmeme.py" beforeDir="false" afterPath="$PROJECT_DIR$/Casey - CYOAmeme.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casey - CYOAmeme.py" beforeDir="false" afterPath="$PROJECT_DIR$/Casey - PrisonEscape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +17,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CSE$Casey___CYOAmeme.coverage" NAME="Casey - CYOAmeme Coverage Results" MODIFIED="1526575411079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$test.coverage" NAME="test Coverage Results" MODIFIED="1526610093750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Casey___CYOAmeme.coverage" NAME="Casey - CYOAmeme Coverage Results" MODIFIED="1526612923917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="CSE" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Casey - CYOAmeme.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+      <file leaf-file-name="Casey - PrisonEscape.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Casey - PrisonEscape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="732" column="14" selection-start-line="732" selection-start-column="14" selection-end-line="732" selection-end-column="14" />
+            <state relative-caret-position="93">
+              <caret line="545" lean-forward="true" selection-start-line="545" selection-end-line="545" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -37,8 +40,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="285">
+              <caret line="19" column="32" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -65,10 +68,13 @@
       <find>equip_weapon</find>
       <find>stair</find>
       <find>inventory_space</find>
+      <find>food</find>
+      <find>armor</find>
     </findStrings>
     <replaceStrings>
       <replace>birthday</replace>
       <replace>thing</replace>
+      <replace>water</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -96,6 +102,7 @@
         <option value="$PROJECT_DIR$/Casey - ItemsMeme.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
+        <option value="$PROJECT_DIR$/Casey - PrisonEscape.py" />
       </list>
     </option>
   </component>
@@ -109,8 +116,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="45" />
-    <option name="y" value="168" />
+    <option name="x" value="31" />
+    <option name="y" value="27" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
@@ -119,7 +126,20 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Program Files/Python36/Lib/site-packages/pip/_vendor/requests/packages/chardet/jisfreq.py" />
@@ -158,7 +178,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey - CYOAmeme.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Casey - PrisonEscape.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,23 +292,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.13333334" side_tool="true" weight="0.387985" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8666667" visible="true" weight="0.6658323" />
-      <window_info anchor="right" id="Coverage" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8666667" visible="true" weight="0.3066333" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46909666" weight="0.47803807" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46909666" weight="0.47777778" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.53090334" side_tool="true" weight="0.29648608" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3977813" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" weight="0.32916147" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -297,27 +316,27 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" weight="0.32916147" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46909666" weight="0.47803807" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8674963" visible="true" weight="0.31220284" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Data View" order="3" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8674963" visible="true" weight="0.31220284" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3977813" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.13250366" side_tool="true" weight="0.31220284" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.53090334" side_tool="true" weight="0.29648608" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,16 +349,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Casey - CYOAmeme.py</url>
+          <url>file://$PROJECT_DIR$/Casey - PrisonEscape.py</url>
           <line>319</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="164" />
+      <option name="time" value="165" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+    <entry file="file://$PROJECT_DIR$/Casey - PrisonEscape.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8100">
           <caret line="540" column="36" selection-start-line="540" selection-start-column="36" selection-end-line="540" selection-end-column="36" />
@@ -356,7 +375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+    <entry file="file://$PROJECT_DIR$/Casey - PrisonEscape.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5880">
           <caret line="392" column="18" lean-forward="true" selection-start-line="392" selection-start-column="18" selection-end-line="392" selection-end-column="18" />
@@ -373,7 +392,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+    <entry file="file://$PROJECT_DIR$/Casey - PrisonEscape.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
@@ -645,15 +664,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="285">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Casey - CYOAmeme.py">
+    <entry file="file://$PROJECT_DIR$/Casey - PrisonEscape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="732" column="14" selection-start-line="732" selection-start-column="14" selection-end-line="732" selection-end-column="14" />
+        <state relative-caret-position="93">
+          <caret line="545" lean-forward="true" selection-start-line="545" selection-end-line="545" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

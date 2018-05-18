@@ -525,6 +525,34 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 attacking_char = None
 inventory_full = False
+warning1_food = False
+warning2_food = False
+warning3_food = False
+warning1_water = False
+warning2_water = False
+warning3_water = False
+
+print("Welcome to Prison Escape!")
+inst = input("Would you like some instructions? (y/n)>_")
+if inst == 'y':
+    print("To move north, type 'north' or 'n'. \nTo move south, type 'south' or 's'.To move east, type 'east' or 'e'. "
+          "\nTo move west, type 'west' or 'w'. \nTo move up, type 'up' or 'u'. \nTo move down, type 'down' or 'd'. \nTo"
+          " see the items in your inventory, type 'i'.\nTo see the description of a room again, type 'l'.\nTo view your"
+          " statistics, type 'stats'.\nTo pick up an item, type 'pick up' plus the name of the item.\nTo put down an "
+          "item, type'put down' plus the name of the item.\nNow, Enjoy...\n\n")
+else:
+    print("Oh, I see, you know everything! Good luck, and if you need help, type '?' for a list of commands. \nNow, "
+          "Enjoy...\n\n")
+
+print("  _____      _                   ______                           \n"
+      " |  __ \    (_)                 |  ____|                         \n"
+      " | |__) | __ _ ___  ___  _ __   | |__   ___  ___ __ _ _ __   ___ \n"
+      " |  ___/ '__| / __|/ _ \| '_ \  |  __| / __|/ __/ _` | '_ \ / _ \ \n"
+      " | |   | |  | \__ \ (_) | | | | | |____\__ \ (_| (_| | |_) |  __/\n"
+      " |_|   |_|  |_|___/\___/|_| |_| |______|___/\___\__,_| .__/ \___|\n"
+      "                                                     | |         \n"
+      "                                                     |_|         \n"
+      )
 
 while True:
     desc = ''
@@ -534,9 +562,9 @@ while True:
           + '=====================================' + '\n' + Fore.BLUE + current_node.name + Style.RESET_ALL)
 
     if current_node.first:
-        print( current_node.description + desc + '\n' + '=============================================================='
-                                                        '=============================================================='
-                                                        '=====================')
+        print(current_node.description + desc + '\n' + '==============================================================='
+                                                       '==============================================================='
+                                                       '===================')
         if current_node == win_room:
             exit(0)
 
@@ -565,7 +593,7 @@ while True:
     if command in directions:
         try:
             current_node.move(command)
-            main_character.hunger -= 10
+            main_character.hunger -= 7
             main_character.thirst -= 5
             if main_character.hunger < 1:
                 main_character.die()
@@ -586,15 +614,23 @@ while True:
         current_node.first = True
 
     elif command == 'i':
+        print("Items:")
         for item in main_character.items:
-            print(item.name)
-        print("You have %i inventory space left" % main_character.inventory_space)
+            print("    " + item.name)
 
-    elif command == 'h':
-        print("You have %i hunger left." % main_character.hunger)
-
-    elif command == 'health':
+    elif command == 'stats':
         print("You have %i health left." % main_character.health)
+        print("You have %i armor." % main_character.armor)
+        print("With each blow, you deal %i damage." % main_character.base_damage)
+        print("You have %i hunger left." % main_character.hunger)
+        print("You have %i thirst." % main_character.thirst)
+
+    elif command == '?':
+        print("To move north, type 'north' or 'n'. \nTo move south, type 'south' or 's'.To move east, type 'east' or "
+              "'e'. \nTo move west, type 'west' or 'w'. \nTo move up, type 'up' or 'u'. \nTo move down, type 'down' or "
+              "'d'. \nTo see the items in your inventory, type 'i'.\nTo see the description of a room again, type 'l'."
+              "\nTo view your statistics, type 'stats'. \nTo pick up an item, type 'pick up' plus the name of the item."
+              "\nTo put down an item, type'put down' plus the name of the item.")
 
     elif 'pick up' in command:
         added = False
@@ -729,5 +765,34 @@ while True:
             if char.attacking:
                 char.attack(main_character)
 
-
     print('\n')
+
+    if not warning1_food:
+        if main_character.hunger < 51:
+            print("You are starting to feel a bit hungry.")
+            warning1_food = True
+    else:
+        if not warning2_food:
+            if main_character.hunger < 26:
+                print("You are pretty hungry. You should eat something soon.")
+                warning2_food = True
+        else:
+            if not warning3_food:
+                if main_character.hunger < 3:
+                    print("You cannot take another step without eating.")
+                    warning3_food = True
+
+    if not warning1_water:
+        if main_character.thirst < 51:
+            print("You are starting to feel a bit thirsty.")
+            warning1_water = True
+    else:
+        if not warning2_water:
+            if main_character.thirst < 26:
+                print("You are pretty thirsty. You should drink some water soon.")
+                warning2_water = True
+        else:
+            if not warning3_water:
+                if main_character.thirst < 6:
+                    print("You cannot take another step without drinking.")
+                    warning3_water = True
