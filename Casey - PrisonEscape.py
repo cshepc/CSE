@@ -422,6 +422,9 @@ def equip(thingy, slot):
             equip_weapon = input("You are not carrying a weapon. would you like to equip the %s?" % thingy.name)
             if equip_weapon == 'yes':
                 main_character.equip(thingy)
+                print("You equipped the %s." % thingy.name)
+            else:
+                pass
 
         else:
             equip_weapon = input("You are not wearing a %s. would you like to put on this %s?" % (slot, slot))
@@ -532,27 +535,27 @@ warning1_water = False
 warning2_water = False
 warning3_water = False
 
-print("Welcome to Prison Escape!")
+print(Fore.LIGHTRED_EX + "Welcome to Prison Escape!" + Style.RESET_ALL)
 inst = input("Would you like some instructions? (y/n)>_")
 if inst == 'y':
     print("To move north, type 'north' or 'n'. \nTo move south, type 'south' or 's'.To move east, type 'east' or 'e'. "
           "\nTo move west, type 'west' or 'w'. \nTo move up, type 'up' or 'u'. \nTo move down, type 'down' or 'd'. \nTo"
           " see the items in your inventory, type 'i'.\nTo see the description of a room again, type 'l'.\nTo view your"
           " statistics, type 'stats'.\nTo pick up an item, type 'pick up' plus the name of the item.\nTo put down an "
-          "item, type'put down' plus the name of the item.\nNow, Enjoy...\n\n")
+          "item, type'put down' plus the name of the item.\n" + Fore.YELLOW + "Now, Enjoy...\n\n" + Style.RESET_ALL)
 else:
-    print("Oh, I see, you know everything! Good luck, and if you need help, type '?' for a list of commands. \nNow, "
-          "Enjoy...\n\n")
+    print("Oh, I see, you know everything! Good luck, and if you need help, type '?' for a list of commands. \n" +
+          Fore.YELLOW + "Now, Enjoy...\n\n" + Style.RESET_ALL)
 
-print("  _____      _                   ______                           \n"
-      " |  __ \    (_)                 |  ____|                         \n"
-      " | |__) | __ _ ___  ___  _ __   | |__   ___  ___ __ _ _ __   ___ \n"
-      " |  ___/ '__| / __|/ _ \| '_ \  |  __| / __|/ __/ _` | '_ \ / _ \ \n"
-      " | |   | |  | \__ \ (_) | | | | | |____\__ \ (_| (_| | |_) |  __/\n"
-      " |_|   |_|  |_|___/\___/|_| |_| |______|___/\___\__,_| .__/ \___|\n"
-      "                                                     | |         \n"
-      "                                                     |_|         \n"
-      )
+print(Style.BRIGHT + "  _____      _                   ______                           \n"
+                     " |  __ \    (_)                 |  ____|                         \n"
+                     " | |__) | __ _ ___  ___  _ __   | |__   ___  ___ __ _ _ __   ___ \n"
+                     " |  ___/ '__| / __|/ _ \| '_ \  |  __| / __|/ __/ _` | '_ \ / _ \ \n"
+                     " | |   | |  | \__ \ (_) | | | | | |____\__ \ (_| (_| | |_) |  __/\n"
+                     " |_|   |_|  |_|___/\___/|_| |_| |______|___/\___\__,_| .__/ \___|\n"
+                     "                                                     | |         \n"
+                     "                                                     |_|         \n"
+      + Style.RESET_ALL)
 
 while True:
     desc = ''
@@ -624,6 +627,7 @@ while True:
         print("With each blow, you deal %i damage." % main_character.base_damage)
         print("You have %i hunger left." % main_character.hunger)
         print("You have %i thirst." % main_character.thirst)
+        print("You have %i inventory space left." % main_character.inventory_space)
 
     elif command == '?':
         print("To move north, type 'north' or 'n'. \nTo move south, type 'south' or 's'.To move east, type 'east' or "
@@ -636,14 +640,15 @@ while True:
         added = False
         for item in current_node.items:
             if command[8:] == item.short_name:
-                main_character.pick_up(item, current_node)
-                added = True
                 if inventory_full:
                     break
+                main_character.pick_up(item, current_node)
+                added = True
 
                 print("You picked up the %s" % item.name)
                 if isinstance(item, Weapon):
                     equip(item, 'weapon')
+
                 if isinstance(item, Helmet):
                     equip(item, 'helmet')
                 if isinstance(item, Chestplate):
@@ -657,7 +662,7 @@ while True:
 
     elif 'put down' in command:
         for item in main_character.items:
-            if command[8:] == item.short_name.lower() or item.name.lower():
+            if command[9:] == item.short_name.lower():
                 main_character.put_down(item)
                 print("You put down the %s" % item.name)
 
