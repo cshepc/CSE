@@ -642,9 +642,9 @@ while True:
             if command[8:] == item.short_name:
                 if inventory_full:
                     break
+                    added = False
                 main_character.pick_up(item, current_node)
                 added = True
-
                 print("You picked up the %s" % item.name)
                 if isinstance(item, Weapon):
                     equip(item, 'weapon')
